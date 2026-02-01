@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/dhex\.php[\s?] [NC]
+RewriteRule ^dhex\.php$ - [F,L]
+
+DirectoryIndex dhex.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ dhex.php?page=$1 [L,QSA]

@@ -1,0 +1,116 @@
+.hover-l-w {
+  position: relative;
+  color: #000;
+  background-color: #fff; /* warna awal */
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hover-l-w::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000; /* warna saat hover */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+
+.hover-l-w:hover::before {
+  transform: scaleX(1);
+}
+.hover-l-w:hover{
+  color: #fff;
+}
+
+.hover-r-w {
+  position: relative;
+  color: #000;
+  background-color: #fff; /* warna awal */
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hover-r-w::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000; /* warna hover */
+  transform: scaleX(0);
+  transform-origin: right; /* kunci kebalikannya */
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+
+.hover-r-w:hover::before {
+  transform: scaleX(1);
+}
+.hover-r-w:hover{
+  color: #fff;
+}
+
+
+
+.hover-l-b {
+  position: relative;
+  color: #fff;
+  background-color: #000; /* warna awal */
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  border: 2px solid #000;
+}
+
+.hover-l-b::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff; /* warna saat hover */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+
+.hover-l-b:hover::before {
+  transform: scaleX(1);
+}
+.hover-l-b:hover{
+  color: #000;
+}
+
+
+.hover-r-b {
+  position: relative;
+  color: #fff;
+  background-color: #000; /* warna awal */
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  border: 2px solid #000;
+}
+
+.hover-r-b::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white; /* warna hover */
+  transform: scaleX(0);
+  transform-origin: right; /* kunci kebalikannya */
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+
+.hover-r-b:hover::before {
+  transform: scaleX(1);
+}
+.hover-r-b:hover{
+  color: #000;
+}

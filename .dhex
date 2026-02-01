@@ -1,0 +1,7 @@
+app_name=MyApp
+
+#jika berjalan di server lokal harap masukan app_url 
+#contoh: url = localhost/dhexstream, maka input dhexstream
+#jika tidak ada maka cukup slash atau "/"
+
+app_url=dhexstream
