@@ -24,9 +24,9 @@ const Navbar = () => {
 
                 {/* Action Icons */}
                 <div className="hidden md:flex items-center gap-4">
-                    <button className="p-2 text-gray-400 hover:text-white transition-colors rounded-full hover:bg-white/5">
+                    <Link to="/search" className="p-2 text-gray-400 hover:text-white transition-colors rounded-full hover:bg-white/5">
                         <Search size={20} />
-                    </button>
+                    </Link>
                     {/* <button className="p-2 text-gray-400 hover:text-white transition-colors">
                         <User size={20} />
                     </button> */}

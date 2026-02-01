@@ -43,6 +43,18 @@ try {
             echo json_encode($data);
             break;
 
+        case 'ongoing':
+            $pageParam = $page > 1 ? "?page=$page" : "";
+            $data = get("ongoing-anime" . $pageParam);
+            echo json_encode($data);
+            break;
+
+        case 'complete':
+            $pageParam = $page > 1 ? "?page=$page" : "";
+            $data = get("complete-anime" . $pageParam);
+            echo json_encode($data);
+            break;
+
         case 'server':
             $server_id = $_GET['server_id'] ?? '';
             if (empty($server_id)) {
@@ -67,8 +79,27 @@ try {
             break;
 
         case 'genre':
-            $data = get("genres"); // Verify if this is correct endpoint
-            echo json_encode($data);
+            $id = $_GET['id'] ?? '';
+            $page = $_GET['page'] ?? 1;
+
+            if (empty($id)) {
+                // Return list of genres from local file
+                $jsonPath = __DIR__ . '/data/genre.json';
+                if (file_exists($jsonPath)) {
+                    $jsonContent = file_get_contents($jsonPath);
+                    $data = json_decode($jsonContent, true);
+                    echo json_encode($data);
+                } else {
+                    http_response_code(500);
+                    echo json_encode(['error' => 'Genre data file not found']);
+                }
+            } else {
+                // Return anime list for specific genre
+                // mimic streamgenre.php: get("genre/$parts[2]$page")
+                $pageParam = $page > 1 ? "?page=$page" : "";
+                $data = get("genre/$id" . $pageParam);
+                echo json_encode($data);
+            }
             break;
 
         default:
