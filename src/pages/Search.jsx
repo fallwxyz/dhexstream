@@ -44,47 +44,9 @@ const Search = () => {
 
     return (
         <div className="container mx-auto px-6 py-20 min-h-screen">
-            <div className="max-w-3xl mx-auto mb-16 text-center">
-                <h1 className="text-3xl font-bold text-white mb-8">Search Anime</h1>
-
-                <form onSubmit={handleSearchSubmit} className="relative group z-10">
-                    <input
-                        type="text"
-                        placeholder="Search for anime... (e.g. Naruto, One Piece)"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        autoFocus
-                        className="w-full bg-dhex-bg-secondary border border-white/10 rounded-full py-4 px-8 pl-14 text-white placeholder-gray-500 focus:outline-none focus:border-dhex-accent focus:ring-1 focus:ring-dhex-accent transition-all shadow-lg"
-                    />
-                    <SearchIcon
-                        className={`absolute left-5 top-1/2 transform -translate-y-1/2 transition-colors ${loading ? 'text-dhex-accent' : 'text-gray-500 group-focus-within:text-dhex-accent'}`}
-                        size={24}
-                    />
-
-                    {loading && (
-                        <div className="absolute right-24 top-1/2 transform -translate-y-1/2">
-                            <Loader className="animate-spin text-dhex-accent" size={20} />
-                        </div>
-                    )}
-
-                    <button
-                        type="submit"
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-dhex-accent hover:bg-dhex-accent-hover text-white px-6 py-2 rounded-full font-medium transition-colors"
-                    >
-                        Search
-                    </button>
-                </form>
-            </div>
-
             {/* Status Messages */}
-            {shouldFetch && loading && (
-                <div className="flex flex-col items-center justify-center my-20 opacity-50">
-                    <div className="animate-pulse text-dhex-accent text-lg">Searching...</div>
-                </div>
-            )}
-
             {shouldFetch && error && (
-                <div className="text-center text-red-400 bg-red-500/10 p-4 rounded-lg max-w-md mx-auto border border-red-500/20">
+                <div className="text-center text-red-400 bg-red-500/10 p-4 rounded-lg max-w-md mx-auto border border-red-500/20 mb-8">
                     Error parsing results. Please try again.
                 </div>
             )}
@@ -96,13 +58,20 @@ const Search = () => {
                 </div>
             )}
 
-            {/* Results Grid */}
+            {/* Loading / Results Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                {results.map((anime, index) => (
-                    <div key={anime.animeId || index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
-                        <AnimeCard anime={anime} />
-                    </div>
-                ))}
+                {loading ? (
+                    // Stable Skeleton Loader
+                    Array.from({ length: 12 }).map((_, i) => (
+                        <div key={i} className="animate-pulse bg-white/5 rounded-xl aspect-[2/3] w-full" />
+                    ))
+                ) : (
+                    results.map((anime, index) => (
+                        <div key={anime.animeId || index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+                            <AnimeCard anime={anime} />
+                        </div>
+                    ))
+                )}
             </div>
 
             {/* Empty State / Initial View */}

@@ -31,7 +31,7 @@ if ($page === 'api') {
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/dhexstream/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/dhexstream/public/image/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DHEX Stream</title>
 

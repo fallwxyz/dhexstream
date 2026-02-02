@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/dhexstream/',
   plugins: [react()],
   resolve: {
     alias: {

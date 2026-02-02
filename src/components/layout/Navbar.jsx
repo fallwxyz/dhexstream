@@ -5,16 +5,30 @@ import {
     Dice5, Users, Info, Settings, ChevronLeft, ChevronRight,
     Home, Zap, CheckCircle, Tags, Play
 } from 'lucide-react';
+import SearchDropdown from '../search/SearchDropdown';
 
 const Navbar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
     const searchRef = useRef(null);
     const sidebarRef = useRef(null);
+
+    // Detect mobile screen size
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 1024);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const genres = [
         "Action", "Adventure", "Comedy", "Drama", "Fantasy",
@@ -26,18 +40,24 @@ const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };
+
+        // Reset/Check on location change
+        handleScroll();
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [location.pathname]);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
+            if (isMobile) return;
             if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setIsSearchOpen(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+    }, [isMobile]);
 
     useEffect(() => {
         if (isSidebarOpen) {
@@ -57,14 +77,29 @@ const Navbar = () => {
     const handleSearch = (e) => {
         e.preventDefault();
         if (searchQuery.trim()) {
-            navigate(`/search?keyword=${encodeURIComponent(searchQuery)}`);
             setIsSearchOpen(false);
+            navigate(`/search?query=${encodeURIComponent(searchQuery.trim())}`);
         }
+    };
+
+    const closeSearch = () => {
+        setIsSearchOpen(false);
+        setSearchQuery('');
+    };
+
+    const openSearch = () => {
+        setIsSearchOpen(true);
     };
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
         if (isSearchOpen) setIsSearchOpen(false);
+    };
+
+    const handleDesktopSearchClick = () => {
+        if (searchQuery.trim()) {
+            setIsSearchOpen(true);
+        }
     };
 
     return (
@@ -87,9 +122,13 @@ const Navbar = () => {
                             <Menu size={26} />
                         </button>
 
-                        <Link to="/" className="flex items-center gap-2 group">
-                            <div className="w-8 h-8 rounded-lg bg-dhex-accent flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform">
-                                D
+                        <Link to="/" className="hidden lg:flex items-center gap-2 group">
+                            <div className="w-9 h-9 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <img
+                                    src="/dhexstream/public/image/logo.png"
+                                    alt="DHEX Logo"
+                                    className="w-full h-full object-contain"
+                                />
                             </div>
                             <span className="hidden xs:block text-2xl font-black tracking-tighter text-white">
                                 DHEX<span className="text-dhex-accent">Stream</span>
@@ -98,80 +137,81 @@ const Navbar = () => {
                     </div>
 
                     {/* Middle: Integrated Search Box (Desktop) */}
-                    <div className="hidden lg:flex items-center flex-grow max-w-xl group">
+                    <div className="hidden lg:flex items-center flex-grow max-w-xl group relative" ref={searchRef}>
                         <form onSubmit={handleSearch} className="w-full relative">
                             <div className="relative flex items-center">
-                                <Link
-                                    to="/filter"
-                                    className="absolute left-4 text-xs font-bold text-gray-400 hover:text-dhex-accent transition-colors border-r border-black/10 pr-3 h-4 flex items-center"
-                                >
-                                    Filter
-                                </Link>
                                 <input
                                     type="text"
                                     value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    onChange={(e) => {
+                                        setSearchQuery(e.target.value);
+                                        if (e.target.value.length >= 2) {
+                                            setIsSearchOpen(true);
+                                        } else if (e.target.value.length === 0) {
+                                            setIsSearchOpen(false);
+                                        }
+                                    }}
+                                    onFocus={handleDesktopSearchClick}
                                     placeholder="Search anime..."
-                                    className="w-full h-11 bg-black/20 hover:bg-black/30 focus:bg-black/30 border border-black/10 focus:border-dhex-accent/50 rounded-lg pl-20 pr-12 text-sm text-gray-200 transition-all outline-none"
+                                    className="w-full h-11 bg-black/20 hover:bg-black/30 focus:bg-black/30 border border-black/10 focus:border-dhex-accent/50 rounded-lg pl-5 pr-12 text-sm text-gray-200 transition-all outline-none"
                                 />
                                 <button type="submit" className="absolute right-3 p-1.5 text-gray-400 hover:text-white transition-colors">
                                     <Search size={18} />
                                 </button>
                             </div>
                         </form>
+                        <SearchDropdown
+                            searchQuery={searchQuery}
+                            setSearchQuery={setSearchQuery}
+                            isOpen={isSearchOpen && !isMobile}
+                            onClose={closeSearch}
+                            variant="desktop"
+                        />
                     </div>
 
                     {/* Right: Actions */}
                     <div className="flex items-center gap-1 sm:gap-3">
-                        {/* Interactive Toggles (Hidden on mobile) */}
-                        <div className="hidden xl:flex items-center gap-1 mr-4">
-                            <button className="p-2 text-gray-400 hover:text-dhex-accent transition-colors flex flex-col items-center gap-0.5 group">
-                                <Users size={18} className="group-hover:-translate-y-0.5 transition-transform" />
-                                <span className="text-[10px] font-bold">Watch2gether</span>
-                            </button>
-                            <button className="p-2 text-gray-400 hover:text-dhex-accent transition-colors flex flex-col items-center gap-0.5 group">
-                                <Dice5 size={18} className="group-hover:rotate-180 transition-transform duration-500" />
-                                <span className="text-[10px] font-bold">Random</span>
-                            </button>
-                            <button className="p-2 text-gray-400 hover:text-dhex-accent transition-colors flex flex-col items-center gap-0.5 group">
-                                <MessageCircle size={18} className="group-hover:scale-110 transition-transform" />
-                                <span className="text-[10px] font-bold">Community</span>
-                            </button>
-                        </div>
+
 
                         {/* Mobile Search Trigger */}
                         <button
-                            onClick={() => setIsSearchOpen(!isSearchOpen)}
+                            onClick={openSearch}
                             className="lg:hidden p-2 text-gray-300 hover:text-dhex-accent"
                         >
                             <Search size={22} />
                         </button>
 
+                        {/* BobAnimeList Link (Desktop) */}
+                        <a
+                            href="https://bobanimelist.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hidden lg:flex items-center justify-center w-12 h-12 hover:scale-110 transition-transform duration-300"
+                        >
+                            <img
+                                src="/dhexstream/public/image/bobanimelist.png"
+                                alt="BobAnimeList"
+                                className="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]"
+                            />
+                        </a>
+
                         {/* Login Button */}
-                        <button className="ml-2 px-6 h-10 bg-dhex-accent hover:bg-dhex-accent-hover text-white text-sm font-bold rounded-lg transition-all active:scale-95 shadow-lg shadow-dhex-accent/20">
+                        <button className="ml-1 sm:ml-2 px-4 sm:px-6 h-10 bg-dhex-accent hover:bg-dhex-accent-hover text-white text-sm font-bold rounded-lg transition-all active:scale-95 shadow-lg shadow-dhex-accent/20">
                             Log In
                         </button>
                     </div>
                 </div>
 
-                {/* Mobile Search Dropdown */}
-                <div className={`lg:hidden absolute top-full left-0 w-full bg-dhex-bg-secondary/95 backdrop-blur-sm border-b border-black/5 transition-all duration-300 transform ${isSearchOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-4 opacity-0 invisible'
-                    }`}>
-                    <form onSubmit={handleSearch} className="container mx-auto p-4 flex items-center gap-2">
-                        <input
-                            type="text"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Enter keywords..."
-                            className="flex-grow h-12 bg-black/20 border border-black/10 rounded-lg px-4 text-white focus:outline-none focus:border-dhex-accent/50"
-                        />
-                        <button type="submit" className="w-12 h-12 bg-dhex-accent rounded-lg flex items-center justify-center text-white">
-                            <Search size={20} />
-                        </button>
-                    </form>
-                </div>
             </header>
 
+            {/* Mobile Search Dropdown */}
+            <SearchDropdown
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+                isOpen={isSearchOpen && isMobile}
+                onClose={closeSearch}
+                variant="mobile"
+            />
             {/* --- SIDEBAR MENU --- */}
             <div
                 className={`fixed inset-0 z-[110] bg-transparent backdrop-blur-lg transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
@@ -229,6 +269,52 @@ const Navbar = () => {
                                     </Link>
                                 );
                             })}
+                        </div>
+                    </div>
+
+                    {/* Mobile Footer Logos (Sidebar) */}
+                    <div className="lg:hidden mt-10 pt-6 border-t border-white/5 space-y-6">
+                        <div className="flex flex-col items-center gap-6 pb-8">
+                            {/* BobAnimeList Link */}
+                            <a
+                                href="https://bobanimelist.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex flex-col items-center gap-2 group transition-all"
+                            >
+                                <div className="w-20 h-20 flex items-center justify-center bg-white/5 rounded-2xl p-3 border border-white/10 group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                                    <img
+                                        src="/dhexstream/public/image/bobanimelist.png"
+                                        alt="BobAnimeList"
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                                <span className="text-[11px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-dhex-accent transition-colors">
+                                    Visit BobAnimeList
+                                </span>
+                            </a>
+
+                            {/* DHEX Stream Logo */}
+                            <Link
+                                to="/"
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="flex flex-col items-center gap-2 group"
+                            >
+                                <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img
+                                        src="/dhexstream/public/image/logo.png"
+                                        alt="DHEX Logo"
+                                        className="w-full h-full object-contain opacity-80 group-hover:opacity-100"
+                                    />
+                                </div>
+                                <span className="text-xl font-black tracking-tighter text-white/40 group-hover:text-white transition-colors">
+                                    DHEX<span className="text-dhex-accent/40 group-hover:text-dhex-accent">Stream</span>
+                                </span>
+                            </Link>
+
+                            <p className="text-[10px] text-gray-600 font-medium tracking-tight mt-4">
+                                © 2024 DHEX Stream. All rights reserved.
+                            </p>
                         </div>
                     </div>
                 </div>
