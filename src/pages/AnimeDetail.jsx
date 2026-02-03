@@ -39,7 +39,6 @@ const AnimeDetail = () => {
     if (!animeData) return null;
 
     // Adjust data access based on actual API response structure
-    // Assuming structure based on provided PHP files doing `get("anime/$id")`
     const anime = animeData.data;
     const episodes = anime.episodeList || [];
 
@@ -98,10 +97,13 @@ const AnimeDetail = () => {
                             })()}
                         </div>
 
-                        {/* Action Buttons (if we had Watch Now logic here directly) */}
+                        {/* Action Buttons */}
                         <div className="flex gap-4 mb-10">
                             {episodes.length > 0 && (
-                                <Link to={`/watch/${id}/${episodes[0].episodeId}`} className="px-8 py-3 bg-dhex-accent hover:bg-dhex-accent-hover text-white rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 shadow-lg shadow-dhex-accent/20">
+                                <Link 
+                                    to={`/watch/${id}/${episodes[episodes.length - 1].episodeId}`} 
+                                    className="px-8 py-3 bg-dhex-accent hover:bg-dhex-accent-hover text-white rounded-lg font-semibold flex items-center gap-2 transition-all hover:scale-105 shadow-lg shadow-dhex-accent/20"
+                                >
                                     <Play size={20} fill="currentColor" /> Start Watching
                                 </Link>
                             )}
@@ -118,21 +120,24 @@ const AnimeDetail = () => {
                                 <p className="text-gray-500">No episodes available yet.</p>
                             ) : (
                                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                                    {episodes.map((ep, index) => (
-                                        <Link
-                                            key={index}
-                                            to={`/watch/${id}/${ep.episodeId}`}
-                                            className="episode-item block bg-dhex-bg hover:bg-white/5 p-4 rounded-lg border border-white/5 hover:border-dhex-accent/50 transition-all group"
-                                        >
-                                            <div className="flex justify-between items-center mb-2">
-                                                <span className="font-mono text-dhex-accent font-bold">EP {ep.number || index + 1}</span>
-                                                <Play size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-dhex-accent" />
-                                            </div>
-                                            <p className="text-sm text-gray-400 truncate group-hover:text-white transition-colors">
-                                                {ep.title || `Episode ${ep.number || index + 1}`}
-                                            </p>
-                                        </Link>
-                                    ))}
+                                    {[...episodes].reverse().map((ep, index) => {
+                                        const episodeNumber = index + 1;
+                                        return (
+                                            <Link
+                                                key={ep.episodeId}
+                                                to={`/watch/${id}/${ep.episodeId}`}
+                                                className="episode-item block bg-dhex-bg hover:bg-white/5 p-4 rounded-lg border border-white/5 hover:border-dhex-accent/50 transition-all group"
+                                            >
+                                                <div className="flex justify-between items-center mb-2">
+                                                    <span className="font-mono text-dhex-accent font-bold">EP {episodeNumber}</span>
+                                                    <Play size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-dhex-accent" />
+                                                </div>
+                                                <p className="text-sm text-gray-400 truncate group-hover:text-white transition-colors">
+                                                    {ep.title || `${anime.title} Episode ${episodeNumber} Subtitle Indonesia`}
+                                                </p>
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             )}
                         </div>
