@@ -4,17 +4,27 @@ import { useFetch } from '../../hooks/useFetch';
 import AnimeCard from '../anime/AnimeCard';
 import { Search, Loader2, ChevronRight, X, ChevronLeft } from 'lucide-react';
 
-// Custom hook for debouncing
+// Custom hook for debouncing with instant cancel
 const useDebounce = (value, delay) => {
     const [debouncedValue, setDebouncedValue] = useState(value);
+    const timerRef = useRef(null);
 
     useEffect(() => {
-        const handler = setTimeout(() => {
+        // Clear previous timer
+        if (timerRef.current) {
+            clearTimeout(timerRef.current);
+        }
+
+        // Set new timer
+        timerRef.current = setTimeout(() => {
             setDebouncedValue(value);
         }, delay);
 
+        // Cleanup
         return () => {
-            clearTimeout(handler);
+            if (timerRef.current) {
+                clearTimeout(timerRef.current);
+            }
         };
     }, [value, delay]);
 
@@ -23,39 +33,68 @@ const useDebounce = (value, delay) => {
 
 const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant = 'desktop' }) => {
     const [selectedIndex, setSelectedIndex] = useState(-1);
-    const debouncedQuery = useDebounce(searchQuery, 300);
+    const [isSearching, setIsSearching] = useState(false);
+
+    // Debounce dengan delay lebih pendek untuk response lebih cepat
+    const debouncedQuery = useDebounce(searchQuery, 200);
+
     const dropdownRef = useRef(null);
+    const inputRef = useRef(null);
     const navigate = useNavigate();
 
-    // Only fetch if debounced query has at least 2 characters
+    // Trigger searching state saat user mengetik
+    useEffect(() => {
+        if (searchQuery !== debouncedQuery && searchQuery.length >= 2) {
+            setIsSearching(true);
+        } else {
+            setIsSearching(false);
+        }
+    }, [searchQuery, debouncedQuery]);
+
+    // Fetch data dengan kondisi yang lebih ketat
+    const shouldFetch = debouncedQuery.trim().length >= 2 && isOpen;
     const { data: searchResults, loading, error } = useFetch(
         'search',
-        { query: debouncedQuery },
-        debouncedQuery.length >= 2 && isOpen
+        { query: debouncedQuery.trim() },
+        shouldFetch
     );
+
+    // Update searching state setelah loading selesai
+    useEffect(() => {
+        if (!loading) {
+            setIsSearching(false);
+        }
+    }, [loading]);
 
     const handleResultClick = useCallback((e, path) => {
         if (e) e.preventDefault();
         onClose();
+        setSearchQuery('');
         navigate(path);
-    }, [onClose, navigate]);
+    }, [onClose, navigate, setSearchQuery]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        if (searchQuery.trim()) {
-            handleResultClick(null, `/search?query=${encodeURIComponent(searchQuery.trim())}`);
+        const trimmedQuery = searchQuery.trim();
+        if (trimmedQuery) {
+            handleResultClick(null, `/search?query=${encodeURIComponent(trimmedQuery)}`);
         }
-    };
+    }, [searchQuery, handleResultClick]);
 
-    const handleInputChange = (e) => {
-        setSearchQuery(e.target.value);
+    const handleInputChange = useCallback((e) => {
+        const value = e.target.value;
+        setSearchQuery(value);
         setSelectedIndex(-1);
-    };
+    }, [setSearchQuery]);
 
-    const handleClearSearch = () => {
+    const handleClearSearch = useCallback(() => {
         setSearchQuery('');
         setSelectedIndex(-1);
-    };
+        setIsSearching(false);
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [setSearchQuery]);
 
     // Close dropdown when clicking outside (desktop only)
     useEffect(() => {
@@ -81,42 +120,68 @@ const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant 
         if (variant === 'mobile' && isOpen) {
             document.body.style.overflow = 'hidden';
             if (window.lenis) window.lenis.stop();
-        } else {
+        } else if (variant === 'mobile') {
             document.body.style.overflow = '';
             if (window.lenis) window.lenis.start();
         }
 
         return () => {
-            document.body.style.overflow = '';
-            if (window.lenis) window.lenis.start();
+            if (variant === 'mobile') {
+                document.body.style.overflow = '';
+                if (window.lenis) window.lenis.start();
+            }
         };
     }, [isOpen, variant]);
 
-    // Keyboard navigation
+    // Keyboard navigation with smooth scrolling
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (!isOpen) return;
 
+            const animeList = searchResults?.data?.animeList || [];
+            const maxIndex = Math.min(animeList.length, 6) - 1;
+
             switch (event.key) {
                 case 'ArrowDown':
                     event.preventDefault();
-                    setSelectedIndex(prev =>
-                        prev < (searchResults?.data?.animeList?.length || 0) - 1 ? prev + 1 : prev
-                    );
+                    setSelectedIndex(prev => {
+                        const newIndex = prev < maxIndex ? prev + 1 : prev;
+                        setTimeout(() => {
+                            const element = document.querySelector(`[data-search-index="${newIndex}"]`);
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            }
+                        }, 0);
+                        return newIndex;
+                    });
                     break;
+
                 case 'ArrowUp':
                     event.preventDefault();
-                    setSelectedIndex(prev => (prev > 0 ? prev - 1 : -1));
+                    setSelectedIndex(prev => {
+                        const newIndex = prev > 0 ? prev - 1 : -1;
+                        setTimeout(() => {
+                            if (newIndex >= 0) {
+                                const element = document.querySelector(`[data-search-index="${newIndex}"]`);
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                }
+                            }
+                        }, 0);
+                        return newIndex;
+                    });
                     break;
+
                 case 'Enter':
                     event.preventDefault();
-                    if (selectedIndex >= 0 && searchResults?.data?.animeList?.[selectedIndex]) {
-                        const anime = searchResults.data.animeList[selectedIndex];
+                    if (selectedIndex >= 0 && animeList[selectedIndex]) {
+                        const anime = animeList[selectedIndex];
                         handleResultClick(null, `/anime/${anime.animeId}`);
                     } else if (searchQuery.trim()) {
-                        handleResultClick(null, `/search?query=${encodeURIComponent(searchQuery.trim())}`);
+                        handleSubmit(event);
                     }
                     break;
+
                 case 'Escape':
                     event.preventDefault();
                     onClose();
@@ -126,62 +191,81 @@ const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant 
 
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, selectedIndex, searchResults, onClose, navigate, searchQuery, handleResultClick]);
+    }, [isOpen, selectedIndex, searchResults, onClose, searchQuery, handleResultClick, handleSubmit]);
+
+    // Auto-focus input on mobile open
+    useEffect(() => {
+        if (variant === 'mobile' && isOpen && inputRef.current) {
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 100);
+        }
+    }, [isOpen, variant]);
 
     if (!isOpen) return null;
 
     const animeList = searchResults?.data?.animeList || [];
-    const hasResults = animeList.length > 0 && !loading && !error;
+    const displayList = animeList.slice(0, 6);
+    const hasResults = displayList.length > 0 && !loading && !error && !isSearching;
+    const showLoading = (loading || isSearching) && searchQuery.length >= 2;
 
-    // Desktop variant styling - matching Navbar theme
+    // Desktop variant
     if (variant === 'desktop') {
         return (
             <div
                 ref={dropdownRef}
-                className="absolute top-full left-0 right-0 mt-2 bg-dhex-bg-secondary/60 backdrop-blur-md rounded-xl border border-black/5 shadow-2xl z-[200] overflow-hidden"
+                className="absolute top-full left-0 right-0 mt-2 bg-dhex-bg-secondary/50 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl z-[200] overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200"
             >
-                {/* Search Results */}
-                <div className="max-h-[400px] overflow-y-auto scrollbar-hide">
+                <div className="max-h-[480px] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent hover:scrollbar-thumb-white/20">
                     {searchQuery.length < 2 && (
                         <div className="p-8 text-center text-gray-400 text-sm">
                             <Search className="mx-auto mb-3 opacity-50" size={32} />
                             <p className="font-medium">Type at least 2 characters to search</p>
+                            <p className="text-xs text-gray-500 mt-2">Press ESC to close</p>
                         </div>
                     )}
 
-                    {loading && searchQuery.length >= 2 && (
+                    {showLoading && (
                         <div className="p-8 text-center text-gray-400 text-sm">
-                            <Loader2 className="mx-auto mb-3 animate-spin" size={24} />
-                            <p className="font-medium">Searching anime...</p>
+                            <Loader2 className="mx-auto mb-3 animate-spin text-dhex-accent" size={32} />
+                            <p className="font-medium">Searching for "{searchQuery}"...</p>
                         </div>
                     )}
 
-                    {error && searchQuery.length >= 2 && (
+                    {error && searchQuery.length >= 2 && !loading && !isSearching && (
                         <div className="p-8 text-center text-red-400 text-sm">
-                            <p className="font-medium">Error loading search results</p>
+                            <p className="font-medium">⚠️ Error loading search results</p>
+                            <p className="text-xs text-gray-500 mt-2">Please try again</p>
                         </div>
                     )}
 
-                    {!loading && !error && searchQuery.length >= 2 && animeList.length === 0 && (
+                    {!loading && !error && !isSearching && searchQuery.length >= 2 && animeList.length === 0 && (
                         <div className="p-8 text-center text-gray-400 text-sm">
-                            <p className="font-medium">No anime found for "{searchQuery}"</p>
+                            <p className="font-medium">🔍 No anime found for "{searchQuery}"</p>
+                            <p className="text-xs text-gray-500 mt-2">Try different keywords</p>
                         </div>
                     )}
 
                     {hasResults && (
                         <div className="p-2">
-                            {animeList.slice(0, 6).map((anime, index) => (
+                            {displayList.map((anime, index) => (
                                 <Link
                                     key={anime.animeId}
                                     to={`/anime/${anime.animeId}`}
-                                    className={`flex items-center gap-4 px-4 py-3.5 rounded-xl transition-all group border-b border-white/10 ${selectedIndex === index
-                                        ? 'bg-dhex-accent text-white shadow-lg shadow-dhex-accent/20'
-                                        : 'text-gray-400 hover:bg-white/5 hover:text-white'
-                                        }`}
+                                    data-search-index={index}
+                                    className={`flex items-center gap-4 px-4 py-3.5 rounded-xl transition-all duration-200 group ${selectedIndex === index
+                                            ? 'bg-dhex-accent text-white shadow-lg shadow-dhex-accent/30 scale-[1.02]'
+                                            : 'text-gray-400 hover:bg-white/5 hover:text-white hover:scale-[1.01]'
+                                        } ${index < displayList.length - 1 ? 'border-b border-white/5' : ''}`}
                                     onClick={(e) => handleResultClick(e, `/anime/${anime.animeId}`)}
                                 >
-                                    <div className="w-12 h-16 flex-shrink-0">
-                                        <AnimeCard anime={anime} showLink={false} />
+                                    <div className="w-12 h-16 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
+                                        <img
+                                            src={anime.poster}
+                                            alt={anime.title}
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                            loading="lazy"
+                                        />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <h4 className={`text-sm font-bold tracking-wide truncate transition-colors ${selectedIndex === index ? 'text-white' : 'text-white group-hover:text-dhex-accent'
@@ -195,10 +279,10 @@ const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant 
                                         )}
                                     </div>
                                     <ChevronRight
-                                        size={14}
-                                        className={`transition-all ${selectedIndex === index
-                                            ? 'opacity-100 translate-x-0'
-                                            : 'opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0'
+                                        size={16}
+                                        className={`transition-all duration-200 ${selectedIndex === index
+                                                ? 'opacity-100 translate-x-0'
+                                                : 'opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0'
                                             }`}
                                     />
                                 </Link>
@@ -207,15 +291,14 @@ const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant 
                     )}
                 </div>
 
-                {/* View More Link - matching Navbar button style */}
-                {hasResults && (
-                    <div className="p-3 border-t border-black/5">
+                {hasResults && animeList.length > 0 && (
+                    <div className="p-3 border-t border-white/10 bg-black/20">
                         <Link
-                            to={`/search?query=${encodeURIComponent(searchQuery)}`}
-                            onClick={(e) => handleResultClick(e, `/search?query=${encodeURIComponent(searchQuery)}`)}
-                            className="flex items-center justify-center gap-2 w-full py-2.5 bg-dhex-accent hover:bg-dhex-accent-hover text-white text-sm font-bold rounded-lg transition-all active:scale-95 shadow-lg shadow-dhex-accent/20"
+                            to={`/search?query=${encodeURIComponent(searchQuery.trim())}`}
+                            onClick={(e) => handleResultClick(e, `/search?query=${encodeURIComponent(searchQuery.trim())}`)}
+                            className="flex items-center justify-center gap-2 w-full py-2.5 bg-dhex-accent hover:bg-dhex-accent-hover text-white text-sm font-bold rounded-lg transition-all duration-200 active:scale-95 shadow-lg shadow-dhex-accent/30 hover:shadow-dhex-accent/50"
                         >
-                            View all results
+                            View all {animeList.length} result{animeList.length !== 1 ? 's' : ''}
                             <ChevronRight size={16} />
                         </Link>
                     </div>
@@ -224,15 +307,14 @@ const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant 
         );
     }
 
-    // Mobile variant - fullscreen overlay like sidebar
+    // Mobile variant
     return (
         <div
             ref={dropdownRef}
             data-lenis-prevent
-            className="fixed inset-0 bg-dhex-bg-secondary backdrop-blur-xl z-[200] overflow-hidden"
+            className="fixed inset-0 bg-dhex-bg-secondary backdrop-blur-xl z-[200] overflow-hidden animate-in fade-in slide-in-from-bottom duration-300"
         >
-            {/* Mobile Search Header */}
-            <div className="bg-black/30 border-b border-black/10 p-4 shadow-xl">
+            <div className="bg-black/40 border-b border-white/10 p-4 shadow-xl">
                 <div className="flex items-center gap-3 mb-3">
                     <button
                         onClick={onClose}
@@ -246,82 +328,86 @@ const SearchDropdown = ({ searchQuery, setSearchQuery, isOpen, onClose, variant 
                 <form onSubmit={handleSubmit} className="relative flex items-center">
                     <button
                         type="submit"
-                        className="absolute left-3 p-1 text-gray-400 hover:text-white transition-colors active:scale-90"
+                        className="absolute left-3 p-1.5 text-gray-400 hover:text-white transition-colors active:scale-90 z-10"
                     >
-                        <Search size={18} />
+                        <Search size={20} />
                     </button>
                     <input
+                        ref={inputRef}
                         type="text"
                         value={searchQuery}
                         onChange={handleInputChange}
                         placeholder="Search anime..."
-                        className="w-full h-12 bg-black/30 border border-black/10 focus:border-dhex-accent/50 rounded-lg pl-11 pr-11 text-base text-white placeholder-gray-500 transition-all outline-none font-medium"
-                        autoFocus
+                        className="w-full h-12 bg-black/30 border border-white/10 focus:border-dhex-accent/50 rounded-xl pl-12 pr-12 text-base text-white placeholder-gray-500 transition-all outline-none font-medium"
+                        autoComplete="off"
+                        autoCorrect="off"
+                        autoCapitalize="off"
+                        spellCheck="false"
                     />
                     {searchQuery && (
                         <button
                             type="button"
                             onClick={handleClearSearch}
-                            className="absolute right-3 p-1.5 text-gray-400 hover:text-white transition-colors active:scale-90"
+                            className="absolute right-3 p-1.5 text-gray-400 hover:text-white transition-colors active:scale-90 z-10"
                         >
-                            <X size={18} />
+                            <X size={20} />
                         </button>
                     )}
                 </form>
             </div>
 
-            {/* Mobile Search Results */}
-            <div className="h-[calc(100vh-144px)] overflow-y-auto scrollbar-hide">
+            <div className="h-[calc(100vh-144px)] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
                 {searchQuery.length < 2 && (
                     <div className="flex flex-col items-center justify-center min-h-[60vh] text-gray-400 px-4">
                         <Search className="mb-4 opacity-50" size={64} />
                         <p className="font-medium text-center text-base">Type at least 2 characters to search</p>
+                        <p className="text-xs text-gray-500 mt-2">Start typing to see results</p>
                     </div>
                 )}
 
-                {loading && searchQuery.length >= 2 && (
+                {showLoading && (
                     <div className="flex flex-col items-center justify-center min-h-[60vh] text-gray-400 px-4">
-                        <Loader2 className="mb-4 animate-spin" size={48} />
-                        <p className="font-medium text-base">Searching anime...</p>
+                        <Loader2 className="mb-4 animate-spin text-dhex-accent" size={56} />
+                        <p className="font-medium text-base text-center">Searching for "{searchQuery}"...</p>
                     </div>
                 )}
 
-                {error && searchQuery.length >= 2 && (
+                {error && searchQuery.length >= 2 && !loading && !isSearching && (
                     <div className="flex flex-col items-center justify-center min-h-[60vh] text-red-400 px-4">
-                        <p className="font-medium text-base">Error loading search results</p>
+                        <p className="font-medium text-base text-center">⚠️ Error loading search results</p>
+                        <p className="text-xs text-gray-500 mt-2">Please try again</p>
                     </div>
                 )}
 
-                {!loading && !error && searchQuery.length >= 2 && animeList.length === 0 && (
+                {!loading && !error && !isSearching && searchQuery.length >= 2 && animeList.length === 0 && (
                     <div className="flex flex-col items-center justify-center min-h-[60vh] text-gray-400 px-4">
-                        <p className="font-medium text-center text-base">No anime found for "{searchQuery}"</p>
+                        <p className="font-medium text-center text-base">🔍 No anime found for "{searchQuery}"</p>
+                        <p className="text-xs text-gray-500 mt-2">Try different keywords</p>
                     </div>
                 )}
 
                 {hasResults && (
                     <div className="p-4 pb-8">
-                        {/* Results Grid */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-                            {animeList.slice(0, 6).map((anime) => (
+                            {displayList.map((anime) => (
                                 <Link
                                     key={anime.animeId}
                                     to={`/anime/${anime.animeId}`}
                                     onClick={(e) => handleResultClick(e, `/anime/${anime.animeId}`)}
-                                    className="transform transition-transform active:scale-95"
+                                    className="transform transition-all duration-200 active:scale-95 hover:scale-105"
                                 >
                                     <AnimeCard anime={anime} showLink={false} />
                                 </Link>
                             ))}
                         </div>
 
-                        {/* View More Button */}
                         <div className="text-center">
                             <Link
-                                to={`/search?query=${encodeURIComponent(searchQuery)}`}
-                                onClick={(e) => handleResultClick(e, `/search?query=${encodeURIComponent(searchQuery)}`)}
-                                className="inline-flex items-center justify-center gap-2 py-3.5 px-10 bg-dhex-accent hover:bg-dhex-accent-hover text-white text-base font-bold rounded-lg transition-all active:scale-95 shadow-lg shadow-dhex-accent/20"
+                                to={`/search?query=${encodeURIComponent(searchQuery.trim())}`}
+                                onClick={(e) => handleResultClick(e, `/search?query=${encodeURIComponent(searchQuery.trim())}`)}
+                                className="inline-flex items-center justify-center gap-2 py-3.5 px-10 bg-dhex-accent hover:bg-dhex-accent-hover text-white text-base font-bold rounded-xl transition-all duration-200 active:scale-95 shadow-lg shadow-dhex-accent/30 hover:shadow-dhex-accent/50"
                             >
-                                View all results
+                                View all {animeList.length} result{animeList.length !== 1 ? 's' : ''}
                                 <ChevronRight size={18} />
                             </Link>
                         </div>

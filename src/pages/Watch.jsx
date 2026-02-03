@@ -86,19 +86,18 @@ const Watch = () => {
     const animeTitle = animeData?.data?.title || 'Loading...';
     const animePoster = animeData?.data?.poster;
 
-    // Reverse episodes untuk urutan Episode 1, 2, 3, dst
-    const reversedEpisodes = [...episodes].reverse();
+    // Reverse episodes untuk urutan Episode 1, 2, 3, dst (ascending order)
+    const reversedEpisodes = [...(episodes || [])].reverse();
     
     // Find current episode number dari reversed array
-    const currentEpisodeIndex = reversedEpisodes.findIndex(e => e.episodeId === ep);
-    const currentEpNumber = currentEpisodeIndex + 1; // Episode 1 ada di index 0
+    const currentEpisodeIndex = reversedEpisodes.findIndex(e => e && e.episodeId === ep);
+    const currentEpNumber = currentEpisodeIndex >= 0 ? currentEpisodeIndex + 1 : 1;
     
-    // Find dari original array untuk navigation
-    const originalIndex = episodes.findIndex(e => e.episodeId === ep);
-    const hasNextEpisode = originalIndex > 0;
-    const hasPrevEpisode = originalIndex < episodes.length - 1;
-    const nextEpisode = hasNextEpisode ? episodes[originalIndex - 1] : null;
-    const prevEpisode = hasPrevEpisode ? episodes[originalIndex + 1] : null;
+    // Navigation dalam urutan ascending (EP 1 -> EP 2 -> ... -> EP terbaru)
+    // "Previous" = episode dengan nomor lebih kecil (lebih lama) = index lebih besar
+    // "Next" = episode dengan nomor lebih besar (lebih baru) = index lebih kecil
+    const hasPrevEpisode = currentEpisodeIndex > 0; // Ada episode sebelumnya jika bukan EP 1
+    const hasNextEpisode = currentEpisodeIndex < reversedEpisodes.length - 1; // Ada episode berikutnya jika bukan EP terakhir
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-dhex-bg via-dhex-bg-secondary to-dhex-bg pt-6 pb-20">
@@ -172,11 +171,11 @@ const Watch = () => {
                         </div>
 
                         {/* Episode Navigation */}
-                        {(hasPrevEpisode || hasNextEpisode) && (
+                        {reversedEpisodes.length > 0 && (
                             <div className="grid grid-cols-2 gap-4">
-                                {hasPrevEpisode && prevEpisode ? (
+                                {hasPrevEpisode ? (
                                     <Link
-                                        to={`/watch/${id}/${prevEpisode.episodeId}`}
+                                        to={`/watch/${id}/${reversedEpisodes[currentEpisodeIndex - 1]?.episodeId}`}
                                         className="group bg-gradient-to-br from-white/5 to-white/10 hover:from-white/10 hover:to-white/15 border border-white/10 hover:border-dhex-accent/50 rounded-xl p-4 transition-all backdrop-blur-sm"
                                     >
                                         <div className="flex items-center gap-3">
@@ -202,9 +201,9 @@ const Watch = () => {
                                     </div>
                                 )}
 
-                                {hasNextEpisode && nextEpisode ? (
+                                {hasNextEpisode ? (
                                     <Link
-                                        to={`/watch/${id}/${nextEpisode.episodeId}`}
+                                        to={`/watch/${id}/${reversedEpisodes[currentEpisodeIndex + 1]?.episodeId}`}
                                         className="group bg-gradient-to-br from-dhex-accent/20 to-dhex-accent/30 hover:from-dhex-accent hover:to-dhex-accent-hover border border-dhex-accent/50 hover:border-dhex-accent rounded-xl p-4 transition-all shadow-lg shadow-dhex-accent/20"
                                     >
                                         <div className="flex items-center gap-3">

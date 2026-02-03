@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
 import { useGsap, animatePageIn } from '../hooks/useGsap';
+import { useAniListImage } from '../hooks/useAniListImage';
 import { Play, Calendar, Star, Clock, Layers, CheckCircle } from 'lucide-react';
 
 const AnimeDetail = () => {
@@ -9,22 +10,11 @@ const AnimeDetail = () => {
     const { data: animeData, loading, error } = useFetch('anime', { id });
     const containerRef = useRef();
     const { gsap, ScrollTrigger } = useGsap();
+    const { image: bannerImage } = useAniListImage(animeData?.data?.title || '');
 
     useEffect(() => {
         if (!loading && animeData) {
             animatePageIn(containerRef.current);
-
-            // Parallax effect for banner
-            gsap.to('.anime-banner', {
-                yPercent: 30,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '.anime-banner-container',
-                    start: 'top top',
-                    end: 'bottom top',
-                    scrub: true
-                }
-            });
 
             // Stagger episodes
             gsap.fromTo('.episode-item',
@@ -46,10 +36,14 @@ const AnimeDetail = () => {
         <div ref={containerRef} className="pb-20">
             {/* Banner / Header */}
             <div className="anime-banner-container relative w-full h-[50vh] overflow-hidden">
-                <img
-                    src={anime.poster}
-                    alt={anime.title}
-                    className="anime-banner w-full h-full object-cover blur-sm opacity-50 scale-110"
+                <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                        backgroundImage: `url(${bannerImage || anime.poster})`,
+                        backgroundPosition: bannerImage ? 'center center' : 'center 20%',
+                        filter: bannerImage ? 'brightness(1)' : 'brightness(0.5) blur(3px)',
+                        transform: bannerImage ? 'scale(1.0)' : 'scale(1.1)'
+                    }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dhex-bg via-dhex-bg/60 to-transparent" />
             </div>
@@ -121,7 +115,8 @@ const AnimeDetail = () => {
                             ) : (
                                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                     {[...episodes].reverse().map((ep, index) => {
-                                        const episodeNumber = episodes.length - index;
+                                        // EP 1 = first episode (index 0 after reverse), EP 2 = second episode (index 1), etc.
+                                        const episodeNumber = index + 1;
                                         return (
                                             <Link
                                                 key={ep.episodeId}
