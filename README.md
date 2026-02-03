@@ -7,6 +7,7 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-orange?style=for-the-badge&logo=version)](package.json)
 [![React](https://img.shields.io/badge/react-18.2.0-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-3.4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![PHP](https://img.shields.io/badge/php-8.2+-777bb4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 
 *A modern anime streaming platform built with React, featuring an elegant UI and seamless viewing experience.*
 
