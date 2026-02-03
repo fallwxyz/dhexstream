@@ -1,4 +1,4 @@
-# 🚀 DHEX Stream
+# 🚀 DHEXStream
 
 <div align="center">
 
@@ -43,7 +43,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dhexstream.git
+git clone https://github.com/fallwxyz/dhexstream.git
 cd dhexstream
 
 # Install frontend dependencies
@@ -67,10 +67,6 @@ cp .dhex.example .dhex
 ```env
 app_url=dhexstream
 hostname=localhost
-username=root
-password=
-database=
-```
 
 3. Configure your web server to point to the project root
 
@@ -149,27 +145,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 👨‍💻 Author
-
-**Your Name** - [GitHub](https://github.com/yourusername) - [email@example.com](mailto:email@example.com)
-
----
-
 ## 🙏 Acknowledgments
 
 - [React](https://reactjs.org/) - UI Library
 - [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS
+- [PHP](https://www.php.net/) - Backend Language
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 - [GSAP](https://greensock.com/gsap/) - Animation Library
 - [Lucide](https://lucide.dev/) - Beautiful Icons
 - [Jikan API](https://jikan.moe/) - MyAnimeList API Wrapper
 
 ---
-
-<div align="center">
-
-**Star ⭐ this repo if you found it useful!**
-
-*Built with ❤️ by [Your Name]*
-
-</div>
