@@ -134,6 +134,39 @@ function parse($index)
 
     return $segments[$index] ?? null;
 }
+function timeToSeconds(int $value, string $unit): int {
+    $unit = strtolower($unit);
+
+    return match ($unit) {
+        'detik', 'second', 'seconds' => $value,
+        'menit', 'minute', 'minutes' => $value * 60,
+        'jam',   'hour',   'hours'   => $value * 3600,
+        'hari',  'day',    'days'    => $value * 86400,
+        'bulan', 'month',  'months'  => $value * 2592000, // 30 hari
+        default => 0
+    };
+}
+
+function cleanExpiredUsers(
+    array &$json,
+    int $value,
+    string $unit
+): void {
+    $expireSeconds = timeToSeconds($value, $unit);
+    $now = time();
+
+    if ($expireSeconds <= 0) return;
+
+    $json['data'] = array_values(array_filter(
+        $json['data'],
+        function ($user) use ($now, $expireSeconds) {
+            return isset($user['last_active'])
+                && ($now - $user['last_active']) <= $expireSeconds;
+        }
+    ));
+}
+
+
 
 function getRecentUserId(
     string $cookieName = 'recent_user_id',
@@ -202,7 +235,8 @@ function addRecent(
     array $newRecent,
     int $limit = 6
 ): void {
-    $newRecent['time'] = timeAgo(time());
+    $now = time();
+    $newRecent['time'] = timeAgo($now);
 
     $foundUser  = false;
     $foundAnime = false;
@@ -211,15 +245,18 @@ function addRecent(
         if ($user['id'] == $userId) {
             $foundUser = true;
 
+            // update last active
+            $user['last_active'] = $now;
+
             foreach ($user['recent'] as $index => &$recent) {
                 if ($recent['animeId'] === $newRecent['animeId']) {
 
-                    // update data yang boleh berubah
+                    // update field yang boleh berubah
                     $recent['href']  = $newRecent['href'];
                     $recent['title'] = $newRecent['title'];
                     $recent['time']  = $newRecent['time'];
 
-                    // pindahkan ke paling depan
+                    // pindah ke paling depan
                     unset($user['recent'][$index]);
                     array_unshift($user['recent'], $recent);
 
@@ -230,12 +267,12 @@ function addRecent(
 
             unset($recent);
 
-            // kalau animeId belum ada → tambah baru
+            // animeId belum ada
             if (!$foundAnime) {
                 array_unshift($user['recent'], $newRecent);
             }
 
-            // batasi maksimal 6 (hapus yang paling lama)
+            // limit 6
             if (count($user['recent']) > $limit) {
                 $user['recent'] = array_slice($user['recent'], 0, $limit);
             }
@@ -246,14 +283,16 @@ function addRecent(
 
     unset($user);
 
-    // user belum ada sama sekali
+    // user baru
     if (!$foundUser) {
         $json['data'][] = [
-            "id"     => $userId,
-            "recent" => [$newRecent]
+            "id"          => $userId,
+            "last_active" => $now,
+            "recent"      => [$newRecent]
         ];
     }
 }
+
 
 
 

@@ -41,9 +41,9 @@ try {
                 $data = get("episode/$ep");
                 echo json_encode($data);
             }
+            cleanExpiredUsers($json, 7, 'hari');
+
             $pos = get('anime/'. $data['data']['animeId']);
-            $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-            $segments = array_values(array_filter(explode('/', $path)));
             $href = $data['data']['animeId'] . '/' . $ep;
             $newRecent = [
                 "title"   => $data['data']['title'],
@@ -53,6 +53,7 @@ try {
             ];
             addRecent($json, $userId, $newRecent);
             saveRecentJson($file, $json);
+            
             break;
 
         case 'schedule':
