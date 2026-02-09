@@ -27,6 +27,8 @@ function App() {
                         <Route path="anime/:id" element={<AnimeDetail />} />
                         <Route path="watch/ongoing" element={<AnimeList type="ongoing" />} />
                         <Route path="watch/completed" element={<AnimeList type="complete" />} />
+                        <Route path="watch/popular" element={<AnimeList type="popular" />} />
+                        <Route path="watch/top-rated" element={<AnimeList type="top_rated" />} />
                         <Route path="genre" element={<Genre />} />
                         <Route path="genre/:id" element={<AnimeList type="genre" />} />
                         <Route path="watch/:id/:ep" element={<Watch />} />

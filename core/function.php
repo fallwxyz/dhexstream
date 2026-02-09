@@ -178,6 +178,212 @@ function get($url)
     return null; // Or handle error appropriately
 }
 
+function get_raw($url)
+{
+    $cacheDir = __DIR__ . '/cache/';
+    if (!is_dir($cacheDir)) {
+        mkdir($cacheDir, 0777, true);
+    }
+
+    $cacheFile = $cacheDir . md5($url) . '.html';
+    $cacheDuration = 3600; // 1 hour for scraped data
+
+    if (file_exists($cacheFile) && (time() - filemtime($cacheFile) < $cacheDuration)) {
+        return file_get_contents($cacheFile);
+    }
+
+    if (!rateLimit(60, 60)) {
+        if (file_exists($cacheFile)) {
+            return file_get_contents($cacheFile);
+        }
+        return null;
+    }
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+
+    $data = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode === 200 && $data) {
+        file_put_contents($cacheFile, $data);
+        return $data;
+    }
+
+    if (file_exists($cacheFile)) {
+        return file_get_contents($cacheFile);
+    }
+
+    return null;
+}
+
+function scrapeOtakuAnime($html)
+{
+    $results = [];
+    if (!$html) {
+        error_log("scrapeOtakuAnime: No HTML content provided.");
+        return $results;
+    }
+
+    libxml_use_internal_errors(true);
+    $dom = new DOMDocument();
+    $dom->loadHTML($html);
+    $xpath = new DOMXPath($dom);
+
+    // Look for venz list entries
+    $nodes = $xpath->query("//div[contains(@class, 'venz')]//li");
+
+    foreach ($nodes as $node) {
+        $item = [];
+
+        // Title
+        $titleNode = $xpath->query(".//h2[contains(@class, 'jdlflm')]", $node)->item(0);
+        $item['title'] = $titleNode ? trim($titleNode->nodeValue) : '';
+
+        // Poster
+        $imgNode = $xpath->query(".//img", $node)->item(0);
+        $item['poster'] = $imgNode ? $imgNode->getAttribute('src') : '';
+
+        // Link and ID
+        $linkNode = $xpath->query(".//a", $node)->item(0);
+        if ($linkNode) {
+            $href = $linkNode->getAttribute('href');
+            $item['otakudesuUrl'] = $href;
+            $parts = explode('/', trim($href, '/'));
+            $item['animeId'] = end($parts);
+            // Reconstruct relative href for frontend if needed
+            $item['href'] = "/anime/anime/" . $item['animeId'];
+        }
+
+        // Score (for Top Rated)
+        $scoreNode = $xpath->query(".//div[contains(@class, 'epztipe')]", $node)->item(0);
+        if ($scoreNode) {
+            $scoreText = trim($scoreNode->nodeValue);
+            // Score usually looks like "7.50" or "Monday" (release day)
+            // We'll try to extract numeric part
+            if (preg_match('/[0-9]+\.[0-9]+/', $scoreText, $matches)) {
+                $item['score'] = $matches[0];
+            } else {
+                $item['score'] = $scoreText;
+            }
+        }
+
+        // Episodes or Release info
+        $epNode = $xpath->query(".//div[contains(@class, 'epz')]", $node)->item(0);
+        if ($epNode) {
+            $epText = trim($epNode->nodeValue);
+            $item['latestReleaseDate'] = $epText;
+            $item['lastReleaseDate'] = $epText;
+            if (preg_match('/([0-9]+)\s*Episode/', $epText, $matches)) {
+                $item['episodes'] = (int) $matches[1];
+            }
+        }
+
+        if (!empty($item['title']) && !empty($item['animeId'])) {
+            $results[] = $item;
+        }
+    }
+
+    if (empty($results)) {
+        error_log("scrapeOtakuAnime: No results found in HTML.");
+    }
+
+    return $results;
+}
+
+function scrapePagination($html)
+{
+    $pagination = [
+        "currentPage" => 1,
+        "totalPages" => 1,
+        "hasNextPage" => false,
+        "hasPrevPage" => false
+    ];
+
+    if (!$html)
+        return $pagination;
+
+    libxml_use_internal_errors(true);
+    $dom = new DOMDocument();
+    $dom->loadHTML($html);
+    $xpath = new DOMXPath($dom);
+
+    $pageNodes = $xpath->query("//div[contains(@class, 'pagination')]//a[contains(@class, 'page-numbers')]");
+    $currentNodes = $xpath->query("//div[contains(@class, 'pagination')]//span[contains(@class, 'current')]");
+
+    if ($currentNodes->length > 0) {
+        $pagination['currentPage'] = (int) trim($currentNodes->item(0)->nodeValue);
+    }
+
+    $maxPage = $pagination['currentPage'];
+    foreach ($pageNodes as $node) {
+        $val = trim($node->nodeValue);
+        if (is_numeric($val)) {
+            $maxPage = max($maxPage, (int) $val);
+        }
+    }
+    $pagination['totalPages'] = $maxPage;
+    $pagination['hasNextPage'] = $pagination['currentPage'] < $pagination['totalPages'];
+    $pagination['hasPrevPage'] = $pagination['currentPage'] > 1;
+
+    return $pagination;
+}
+
+function getPopularAnime($page = 1)
+{
+    $url = "https://otakudesu.best/ongoing-anime/";
+    if ($page > 1) {
+        $url .= "page/$page/";
+    }
+
+    $html = get_raw($url);
+    $list = scrapeOtakuAnime($html);
+    $pagination = scrapePagination($html);
+    $pagination['totalAnime'] = count($list); // Approximate
+
+    return [
+        "status" => "success",
+        "data" => [
+            "animeList" => $list,
+        ],
+        "pagination" => $pagination
+    ];
+}
+
+function getTopRatedAnime($page = 1)
+{
+    $url = "https://otakudesu.best/complete-anime/";
+    if ($page > 1) {
+        $url .= "page/$page/";
+    }
+
+    $html = get_raw($url);
+    $list = scrapeOtakuAnime($html);
+    $pagination = scrapePagination($html);
+    $pagination['totalAnime'] = count($list); // Approximate
+
+    // Sort by score if available
+    usort($list, function ($a, $b) {
+        $scoreA = isset($a['score']) && is_numeric($a['score']) ? (float) $a['score'] : 0;
+        $scoreB = isset($b['score']) && is_numeric($b['score']) ? (float) $b['score'] : 0;
+        return $scoreB <=> $scoreA;
+    });
+
+    return [
+        "status" => "success",
+        "data" => [
+            "animeList" => $list,
+        ],
+        "pagination" => $pagination
+    ];
+}
+
 function slug($url, $num = 1)
 {
     $path = trim(parse_url($url, PHP_URL_PATH), '/');

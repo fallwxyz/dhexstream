@@ -36,6 +36,14 @@ const AnimeList = ({ type }) => {
         params = { ...params, id };
         title = `Genre: ${id?.replace(/-/g, ' ').toUpperCase()}`;
         Icon = Tags;
+    } else if (type === 'popular') {
+        endpoint = 'popular';
+        title = 'Popular Anime';
+        Icon = Zap;
+    } else if (type === 'top_rated') {
+        endpoint = 'top_rated';
+        title = 'Highest Rated Anime';
+        Icon = CheckCircle;
     }
 
     const { data: listData, loading, error } = useFetch(endpoint, params);
@@ -53,6 +61,8 @@ const AnimeList = ({ type }) => {
         if (type === 'ongoing') path = '/watch/ongoing';
         else if (type === 'complete') path = '/watch/completed';
         else if (type === 'genre') path = `/genre/${id}`;
+        else if (type === 'popular') path = '/watch/popular';
+        else if (type === 'top_rated') path = '/watch/top-rated';
 
         navigate(`${path}?page=${newPage}`);
     };
@@ -130,7 +140,7 @@ const AnimeList = ({ type }) => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4 md:gap-6">
                     {animeList.map((anime, idx) => (
                         <div
-                            key={anime.id || anime.slug || idx}
+                            key={anime.animeId || anime.id || anime.slug || idx}
                             className="animate-fade-in-up"
                             style={{ animationDelay: `${idx * 0.05}s` }}
                         >

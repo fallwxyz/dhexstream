@@ -38,6 +38,14 @@ try {
             echo json_encode(['status' => 'success', 'data' => $recent]);
             break;
 
+        case 'popular':
+            echo json_encode(getPopularAnime($page));
+            break;
+
+        case 'top_rated':
+            echo json_encode(getTopRatedAnime($page));
+            break;
+
 
         case 'anime':
             if (empty($id)) {

@@ -1,0 +1,245 @@
+{
+  "status": "success",
+  "creator": "Sanka Vollerei",
+  "statusCode": 200,
+  "statusMessage": "OK",
+  "message": "",
+  "ok": true,
+  "data": {
+    "animeList": [
+      {
+        "title": "Citrus",
+        "poster": "https://otakudesu.best/wp-content/uploads/2018/09/Citrus-Sub-Indo.jpg",
+        "studios": "Passione",
+        "score": "7,12",
+        "episodes": 12,
+        "season": "Winter 2018",
+        "animeId": "chitrus-subtitle-indonesia",
+        "href": "/anime/anime/chitrus-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/chitrus-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Menceritakan  tentang seorang gadis bernama Yuzu Aihara. Yuzu pindah sekolah karena ibunya menikah lagi. Yuzu adalah gadis nakal (gal) yang tidak pernah merasakan jatuh cinta. Yuzu yang menginginkan sebuah pacar justru pindah kesekolah khusus perempuan yang peraturannya sangatlah ketat.",
+            "Di hari pertamanya masuk sekolah, Yuzu kedapatan membawa handphone kesekolah yang semestinya tidak harus dibawa kelingkungan sekolah. Yuzu yang tidak menerima hal itu terlibat konfrontasi oleh Ketua OSIS, Mei Aihara.",
+            "Saat dia pulang kerumah, Yuzu langsung mengetahui bahwa Ketua OSIS yang dia benci disekolah adalah Mei, saudara tirinya yang dibawa oleh ayah tirinya.",
+            "Yuzu pun mulai belajar tentang kebencian dan ketertarikan itu tidaklah beda jauh. Simak keseruan diantara kedua saudara tiri ini."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Drama",
+            "genreId": "drama",
+            "href": "/anime/genre/drama",
+            "otakudesuUrl": "https://otakudesu.best/genres/drama/"
+          },
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Hidan no Aria Season 2",
+        "poster": "https://otakudesu.best/wp-content/uploads/2018/08/Hidan-no-Aria-Season-2-Sub-Indo.jpg",
+        "studios": "Doga Kobo",
+        "score": "6.38",
+        "episodes": 12,
+        "season": "Fall 2015",
+        "animeId": "hidan-aria-aa-subtitle-indonesia",
+        "href": "/anime/anime/hidan-aria-aa-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/hidan-aria-aa-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Bercerita tentang seorang siswi di SMA Tokyou Butei bernama Mamiya Akari yang bermimpi menjadi seorang Butei (Detektif) seperti sang idola, Kanzaki Aria Holmes.",
+            "Namun sayangnya, impian Akari sepertinya berbanding terbalik dengan kehidupan aslinya. Dirinya hanyalah seorang siswa gagal yang ditempatkan dikelas-E tak seperti idolanya Aria yang berada di kelas teratas yaitu kelas-A, dan berbagai perbedaan jauh lainnya seperti kekuatan, keahlian, dan beberapa potensi lainnya membuat jarak diantara mereka semakin jauh.",
+            "Namun hal tersebut tak membuat Akari patah semangat, terutama saat kesempatan yang mungkin hanya datang seumur hidupnya, yaitu saat program sekolah Amica dimulai, Amica adalah sebuah program sekolah dimana sang senior dipasangkan dengan murid baru. Melihat kesempatan tersebut pastinya Akari tak tinggal diam.",
+            "Namun saat ingin menjadi Assisten Aria bukanlah hal mudah, Aria memberi beberapa tes kepada Akari sebelum Akari dapat menjadi asistennya, apakah Akari dapat menyelesaikan tes tersebut dan berhasil menjadi pendamping sang idola?."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Action",
+            "genreId": "action",
+            "href": "/anime/genre/action",
+            "otakudesuUrl": "https://otakudesu.best/genres/action/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Sakura Trick",
+        "poster": "https://otakudesu.best/wp-content/uploads/2017/10/Sakura-Trick-Sub-Indo.jpg",
+        "studios": "Studio Deen",
+        "score": "7.15",
+        "episodes": 12,
+        "season": "Winter 2014",
+        "animeId": "trick-sakura-subtitle-indonesia",
+        "href": "/anime/anime/trick-sakura-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/trick-sakura-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Anime Sakura Trick mengisahkan tentang 2 sahabat gadis yang masih gadis antara Takayama Haruka dan Yuu Sonada, mereka sudah lama menjadi sahabat sejak smp, hubungan mereka berdua sangat erat dan tidak akan terpisahkan.",
+            "Namun sekarang mereka berdua telah memasuki SMA dan sayangnya mereka harus berada di tempat duduk yang berbeda, karena hal itu, keduanya memutuskan untuk menjalin hubungan yang lebih dekat.",
+            "Hubungan spesial antara 2 gadis ini sangatlah berbeda yang jarang dilakukan gadis lainnya, yaitu berciuman, dan mereka terus memperdalam hubungan tersebut layaknya seorang pacar.",
+            "Walaupun begitu bukan berarti hubungan mereka tidak memiliki gejolak, karena permasalahan-permasalahan datang silih berganti membuat mereka sering bertengkar, walaupun begitu mereka berdua tetap saling memberi semangat dan dorongan untuk diri mereka, dari sinilah kisah mereka dimulai."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Seinen",
+            "genreId": "seinen",
+            "href": "/anime/genre/seinen",
+            "otakudesuUrl": "https://otakudesu.best/genres/seinen/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Aoi Hana",
+        "poster": "https://otakudesu.best/wp-content/uploads/2017/06/Aoi-Hana.jpg",
+        "studios": "J.C.Staff",
+        "score": "7.27",
+        "episodes": 11,
+        "season": "",
+        "animeId": "hana-aoi-subtitle-indonesia",
+        "href": "/anime/anime/hana-aoi-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/hana-aoi-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Aoi Hana adalah anime yang diadaptasi dari manga Yuri dengan judul yang sama, karya Takako Shimura.",
+            "Ceritanya ketika memasuki bangku SMA, Akira Okudaira bertemu kembali dengan teman masa kecilnya, Fumi Manjōme, setelah sepuluh tahun tak terdengar kabarnya satu sama lain. Meski sekarang mereka siswi dari sekolah yang berbeda, mereka tetap berteman baik. Akira di SMA Wanita Fujigaya, sedangkan Fumi bersekolah di SMA Wanita Matsuoka, dan di sekolah itu pula Fumi jatuh hati pada seorang siswi kelas tiga yang terlihat tampan bernama Yasuko Sugimoto.",
+            "Di sekolahnya, Akira bergabung di klub drama bersama sahabatnya, Kyoko Ikumi. Dan ternyata Kyoko juga jatuh cinta kepada Yasuko, meski Yasuko menolaknya.",
+            "Yasuko dan Fumi telah resmi pacaran, dan mau tak mau Akira mencoba untuk mendukung hubungan baru Fumi ini. Tak lama Yasuko dan Fumi putus. Yasuko memutuskan untuk kuliah di London. Dan Fumi mengatakan kepada Akira bahwa Akira adalah cinta pertamanya.",
+            "Waktu berlalu, dan mereka telah memasuki tahun kedua di SMA. Dan selama liburan musim panas, Akira mengajak Fumi pergi berkencan, setelah berpikir keras tentang hal itu tentunya."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Konohana Kitan",
+        "poster": "https://otakudesu.best/wp-content/uploads/2018/06/Konohana-Kitan-Sub-Indo.jpg",
+        "studios": "Lerche",
+        "score": "7.69",
+        "episodes": 12,
+        "season": "Fall 2017",
+        "animeId": "konohana-no-kitan-subtitle-indonesia",
+        "href": "/anime/anime/konohana-no-kitan-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/konohana-no-kitan-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Berpusat di sebuah desa yang dihuni oleh para youkai. Kehidupan disana memiliki beberapa pekerjaan seperti yang dilakukan oleh rubah Mononoke dengan membuka penginapan musim panas. Penginapan tersebut menyajikan cara unik untuk melayani para pelanggannya yang datang ke kota tersebut.",
+            "Penginapan tersebut bernama Konohana-tei yang merupakan tempat penginapan dan pemandian air panas yang terletak di antara batas dunia nyata dan dunia lain. Dengan cerita yang berfokus pada Yuzu, seorang gadis youkai yang bekerja di sebuah penginapan",
+            "Yuzu yang selalu tinggal dipegunungan harus beradaptasi dengan kehidupan yang dijalaninya sekarang. Ia pun harus berusaha mengatasi sifat kikuk dan cerobohnya ketika belajar di penginapan tersebut. Ia juga diharuskan untuk bergaul dengan para rubah lainnya."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Seinen",
+            "genreId": "seinen",
+            "href": "/anime/genre/seinen",
+            "otakudesuUrl": "https://otakudesu.best/genres/seinen/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      }
+    ]
+  },
+  "pagination": {
+    "currentPage": 2,
+    "hasPrevPage": true,
+    "prevPage": 1,
+    "hasNextPage": false,
+    "nextPage": null,
+    "totalPages": 2
+  }
+}

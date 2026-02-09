@@ -1,0 +1,676 @@
+{
+  "status": "success",
+  "creator": "Sanka Vollerei",
+  "statusCode": 200,
+  "statusMessage": "OK",
+  "message": "",
+  "ok": true,
+  "data": {
+    "animeList": [
+      {
+        "title": "Watashi no Oshi wa Akuyaku Reijou",
+        "poster": "https://otakudesu.best/wp-content/uploads/2024/02/Watashi-no-Oshi-wa-Akuyaku-Reijou-Sub-Indo.jpg",
+        "studios": "Platinum Vision",
+        "score": "7.37",
+        "episodes": 12,
+        "season": "Fall 2023",
+        "animeId": "watashi-reijou-sub-indo",
+        "href": "/anime/anime/watashi-reijou-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/watashi-reijou-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Rei Oohashi merupakan seorang wanita yang bekerja di sebuah kantor. Suatu hari, ia terbangun dan menyadari bahwa dirinya telah berada di dalam tubuh karakter protagonis di game favoritnya, Revolution.",
+            "Rei yang saat ini berada di tubuh sang protagonis bertemu dengan karakter antagonis bernama Claire Francois. Menariknya, Claire merupakan karakter favorit dari Rei.",
+            "Melihat hal tersebut, Rei bertekad untuk membuat Claire jatuh cinta terhadap dirinya ketimbang karakter utama di dalam game tersebut."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Girls Love",
+            "genreId": "girls-love",
+            "href": "/anime/genre/girls-love",
+            "otakudesuUrl": "https://otakudesu.best/genres/girls-love/"
+          },
+          {
+            "title": "Isekai",
+            "genreId": "isekai",
+            "href": "/anime/genre/isekai",
+            "otakudesuUrl": "https://otakudesu.best/genres/isekai/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Watashi no Yuri wa Oshigoto desu!",
+        "poster": "https://otakudesu.best/wp-content/uploads/2023/04/Watashi-no-Yuri-wa-Oshigoto-desu-Sub-Indo.jpg",
+        "studios": "Passione, Studio Lings",
+        "score": "6.71",
+        "episodes": 12,
+        "season": "Spring 2023",
+        "animeId": "yuri-job-sub-indo",
+        "href": "/anime/anime/yuri-job-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/yuri-job-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Bagi Hime Shiraki, kehidupannya memang terlihat begitu menjanjikan untuk seukuran gadis remaja. Ia memang dikenal sebagai salah satu gadis dengan nilai bagus serta reputasi yang tak ternodai hingga saat ini.",
+            "Namun suatu hari, Hime secara tidak sengaja tergilincir di sebuah tangga dan menimpa Mai Mikoshiba. Karena insiden tersebut, Mai mengalami luka di lengannya. Selain itu, Mai rupanya merupakan manajer di sebuah kafe dan insiden ini membuatnya tidak bisa bekerja.",
+            "Untuk itu, Hime memilih menggantikan Mai bekerja di Café Liebe. Hime pun mendapatkan sambutan hangat dari pekerja lainnya. Namun, ada satu gadis yang rupanya tidak menyukai Hime karena alasan yang tidak diketahui."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Girls Love",
+            "genreId": "girls-love",
+            "href": "/anime/genre/girls-love",
+            "otakudesuUrl": "https://otakudesu.best/genres/girls-love/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Tensei Oujo to Tensai Reijou no Mahou Kakumei",
+        "poster": "https://otakudesu.best/wp-content/uploads/2023/03/Tensei-Oujo-to-Tensai-Reijou-no-Mahou-Kakumei-Sub-Indo.jpg",
+        "studios": "Diomedéa",
+        "score": "7.61",
+        "episodes": 12,
+        "season": "Winter 2023",
+        "animeId": "tensei-kumei-sub-indo",
+        "href": "/anime/anime/tensei-kumei-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/tensei-kumei-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Mengisahkan Anne-Sophia, seorang putri yang dapat mengingat kehidupan sebelumnya ketika masih muda dulu. Saat ini, Anne sangat mengagumi sihir namun yang menarik, ia tidak dapat menggunakan sihir. Untuk itu, sang putri tidak punya pilihan selain mempelajarinya secara otodidak.",
+            "Suatu hari, Anne secara tidak sengaja melihat seorang wanita bangsawan bernamaa Euphyllia yang secara tidak adil gelarnya diturunkan. Untuk itu, Anne menyusun rencana agar bisa mengembalikan nama baik dari Euphyllia.Namun, tidak ada yang menyangka bahwa pertemuan kedua wanita ini akan mengubah masa depan mereka sendiri serta masa depan kerajaan bahkan seluruh dunia."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Girls Love",
+            "genreId": "girls-love",
+            "href": "/anime/genre/girls-love",
+            "otakudesuUrl": "https://otakudesu.best/genres/girls-love/"
+          },
+          {
+            "title": "Isekai",
+            "genreId": "isekai",
+            "href": "/anime/genre/isekai",
+            "otakudesuUrl": "https://otakudesu.best/genres/isekai/"
+          },
+          {
+            "title": "Reincarnation",
+            "genreId": "reincarnation",
+            "href": "/anime/genre/reincarnation",
+            "otakudesuUrl": "https://otakudesu.best/genres/reincarnation/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Yuri Kuma Arashi",
+        "poster": "https://otakudesu.best/wp-content/uploads/2021/05/Yuri-Kuma-Arashi-Sub-Indo.jpg",
+        "studios": "SILVER LINK.",
+        "score": "7.07",
+        "episodes": 12,
+        "season": "Winter 2015",
+        "animeId": "yuri-kuma-sub-indo",
+        "href": "/anime/anime/yuri-kuma-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/yuri-kuma-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Kembali ke beberapa tahun lalu, sebuah planet bernama Kumaria meletus dan sisa-sisa dari ledakan ini jatuh ke Bumi. Sialnya, sisa-sila letusan ini membuat hewan Beruang menyerang umat manusia. Untuk menghadapi serangan Beruang, maka manusia di bumi membuat Wal of Severence, sebuah dinding yang dapat mengendalikan hewan buas tersebut.",
+            "Suatu hari, Kureha Tsubaki yang tengah berada di sekitar taman bunga Akademi Arashigaoka bertemu dengan pacarnya, Sumika Izumino. Sayang, di lokasi tersebit Sumika terbunuh oleh Beruang yang merupakan perwujudan dari teman sekelasnya, Ginko Yurishiro dan Lulu Yurigasaki.",
+            "Sekarang, Kureha bertekad untuk membalaskan kematian dari pacarnya. Mampukah ia mencapai tujuannya tersebut?"
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Drama",
+            "genreId": "drama",
+            "href": "/anime/genre/drama",
+            "otakudesuUrl": "https://otakudesu.best/genres/drama/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Psychological",
+            "genreId": "psychological",
+            "href": "/anime/genre/psychological",
+            "otakudesuUrl": "https://otakudesu.best/genres/psychological/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Seinen",
+            "genreId": "seinen",
+            "href": "/anime/genre/seinen",
+            "otakudesuUrl": "https://otakudesu.best/genres/seinen/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Urasekai Picnic",
+        "poster": "https://otakudesu.best/wp-content/uploads/2021/01/Urasekai-Picnic.jpg",
+        "studios": "LIDENFILMS, Felix Film",
+        "score": "6.56",
+        "episodes": 12,
+        "season": "Winter 2021",
+        "animeId": "urasekai-no-picnic-sub-indo",
+        "href": "/anime/anime/urasekai-no-picnic-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/urasekai-no-picnic-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Mengisahkan seorang mahasiswi bernama Sorawo Kamikoshi. Suatu hari, ia memasuki salah satu pintu yang membawanya masuk ke sisi lain dari sebuah dunia dan kisah urban di internet. Ketika memasuki dunia baru tersebut, Kamikoshi hampir saja tewas.",
+            "Beruntungnya, ia berhasil diselamatkan oleh gadis bernama Toriko Nishina. Ketika pertama kali bertemu, Nishina adalah gadis yang sangat misterius menurut Kamikoshi. Walau begitu, Nishina merupakan pengguna pistol yang begitu ahli.",
+            "Setelah pertemuannya, Nishina dan Kamikoshi memutuskan untuk berpetualang bersama dan menemukan rahasia di balik pintu – pintu yang tersebar di dunia ini. Mampukah mereka menemukan sesuatu yang menarik?"
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Adventure",
+            "genreId": "adventure",
+            "href": "/anime/genre/adventure",
+            "otakudesuUrl": "https://otakudesu.best/genres/adventure/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Mystery",
+            "genreId": "mystery",
+            "href": "/anime/genre/mystery",
+            "otakudesuUrl": "https://otakudesu.best/genres/mystery/"
+          },
+          {
+            "title": "Sci-Fi",
+            "genreId": "sci-fi",
+            "href": "/anime/genre/sci-fi",
+            "otakudesuUrl": "https://otakudesu.best/genres/sci-fi/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Adachi to Shimamura",
+        "poster": "https://otakudesu.best/wp-content/uploads/2020/10/Adachi-to-Shimamura-Sub-Indo.jpg",
+        "studios": "Tezuka Productions",
+        "score": "7.37",
+        "episodes": 12,
+        "season": "Fall 2020",
+        "animeId": "adachi-shimamura-sub-indo",
+        "href": "/anime/anime/adachi-shimamura-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/adachi-shimamura-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Bermulai dari dua siswi yang bertemu di lantai atas gedung olahraga sekolahnya, Adachi yang sering membolos dari kelas tiba-tiba bertemu dengan Shimamura yang tak lain merupakan teman sekelasnya yang nakal. Pertemuan dua orang gadis yang secara singkat membuat mereka menjadi teman dengan cepat.",
+            "Bermain ping pong, bercerita, dan makan siang mereka lakukan bersama, kadang membolos adalah pilihan bersama yang tepat untuk menghabiskan waktu, kegiatan biasa yang terkesan biasa saja namun entah kenapa rasanya sangat nyaman dan bahagia saat mereka berdua bersama.",
+            "Seiring berjalan waktu muncul perasaan aneh Adachi yang timbul di dalam dirinya saat bersama Shimamura, dari sinilah kedua gadis ini belajar satu sama lain akan perasaan mereka."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Yuru Yuri Season 3",
+        "poster": "https://otakudesu.best/wp-content/uploads/2020/08/Yuru-Yuri-Season-3-Sub-Indo.jpg",
+        "studios": "TYO Animations",
+        "score": "7.97",
+        "episodes": 12,
+        "season": "Fall 2015",
+        "animeId": "yuru-ni-yuri-season-3-sub-indo",
+        "href": "/anime/anime/yuru-ni-yuri-season-3-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/yuru-ni-yuri-season-3-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Season ke-3 dari anime Yuru Yuri."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Yuru Yuri Season 2",
+        "poster": "https://otakudesu.best/wp-content/uploads/2020/08/Yuru-Yuri-Season-2-Sub-Indo.jpg",
+        "studios": "Doga Kobo",
+        "score": "7.87",
+        "episodes": 12,
+        "season": "Summer 2012",
+        "animeId": "yuru-ni-yuri-season-2-sub-indo",
+        "href": "/anime/anime/yuru-ni-yuri-season-2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/yuru-ni-yuri-season-2-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Season ke-2 dari anime Yuru Yuri."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Yuru Yuri",
+        "poster": "https://otakudesu.best/wp-content/uploads/2020/08/Yuru-Yuri-Sub-Indo.jpg",
+        "studios": "Doga Kobo",
+        "score": "7.61",
+        "episodes": 12,
+        "season": "Summer 2011",
+        "animeId": "yuru-ni-yuri-sub-indo",
+        "href": "/anime/anime/yuru-ni-yuri-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/yuru-ni-yuri-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Akari Akaza akhirnya berhasil masuk di SMP Nanamori yang bertempat di Takaoka, Toyama. Di sekolah barunya, Akari bergabung ke Amusament Club atau Klub Kesenangan. Di klub tersebut, ia bersama dengan teman masa kecilnya Kyouko Toshinau dan Yui Funami.",
+            "Awalnya, Amusament Club merupakan tempat dari Klub Teh. Sayangnya, klub ini sudah bubar dan anggota barunya bernama Chinatsu Yohsikawa tidak tahu akan hal itu. Berhubung ia sudah bergabung, mau tidak mau Chinatsu memilih untuk tetap berada di klub tersebut.",
+            "Setiap hari, keempat gadis ini menghabiskan waktunya untuk bermain sembari menceritakan kejadian yang mereka alami. Tak jarang, ada momen untuk di setiap kegiatan yang mereka lakukan"
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Inugami-san to Nekoyama-san",
+        "poster": "https://otakudesu.best/wp-content/uploads/2019/10/Inugami-san-to-Nekoyama-san-Sub-Indo.jpg",
+        "studios": "Seven",
+        "score": "6.64",
+        "episodes": 12,
+        "season": "Spring 2014",
+        "animeId": "inugami-nekoyama-sub-indo",
+        "href": "/anime/anime/inugami-nekoyama-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/inugami-nekoyama-sub-indo/",
+        "synopsis": {
+          "paragraphs": [
+            "Suzu Nekoyama merupakan seorang gadis yang memiliki tubuh yang kecil, imut, & lucu. Nekoyama bisa dibilang mirip dengan kucing namun ia sebenarnya sangat menyukai anjing. Dan, Yachiyo Inugami seorang gadis yang memiliki tubuh tinggi dan seorang masokis, ia sangat menyukai kucing.",
+            "Suatu hari teman mereka mempertemukan mereka berdua, walaupun sifat mereka berkebalikan, sepertinya mereka akan menjadi sangat dekat. Anime ini berkisah tentang keseharian mereka berdua bersama sahabat dekat mereka."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Akuma no Riddle",
+        "poster": "https://otakudesu.best/wp-content/uploads/2019/05/Akuma-no-Riddle-Sub-Indo.jpg",
+        "studios": "Diomedea",
+        "score": "6.79",
+        "episodes": 12,
+        "season": "Spring 2014",
+        "animeId": "akuma-riddle-subtitle-indonesia",
+        "href": "/anime/anime/akuma-riddle-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/akuma-riddle-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Ada seorang anak yang dari kecil telah dilatih untuk menjadi seorang pembunuh, ialah Azuma tokaku, suatu hari ia mendadak ditugaskan untuk masuk ke kelas kurogumi, sekolah khusus untuk wanita, Myojo Academi, kebanyakan orang menyebutnya sebagai kelas elit, dimana hanya orang orang tertentu saja yang dapat masuk ke kelas tersebut.",
+            "Kelas tersebut semuanya diisi 12 gadis-gadis yang terlihat biasa, namun bedanya, kelas tersebut adalah tempat dimana para gadis yang sama seperti tokaku, yap, mereka semuanya adalah seorang pembunuh, mereka berkumpul disana untuk mengikuti sebuah perlombaan.",
+            "Disana Tokaku yang seharusnya ikut bersaing untuk membunuh seorang gadis bernama Ichinose Haru, namun saat mengikuti perlombaan disana, tokaku justru berbalik untuk melindungi haru dari pembunuh lainnya, apa yang sebenarnya terjadi? kenapa tokaku malah memilih melindungi haru?",
+            "Mungkin terlihat dari genrenya adalah School dan Shoujo Ai, dimana para cerita romantis para gadis seperti biasanya, namun sama sekali berbeda, ini adalah cerita dimana para gadis yang cantik dan imut seperti mereka membunuh satu sama lain, yaitu adalah Akuma no Riddle.",
+            "Mereka semua memiliki misi, yaitu ditugaskan untuk membunuh seseorang dikelas mereka, dan siapa yang paling cepat menyelesaikan misinya akan memenangkan hadiah, yaitu apapun keinginannya akan dikabulkan, siapakah yang paling cepat menyelesaikan misinya? siapa yang akan terbunuh?"
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Action",
+            "genreId": "action",
+            "href": "/anime/genre/action",
+            "otakudesuUrl": "https://otakudesu.best/genres/action/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Watashi ni Tenshi ga Maiorita!",
+        "poster": "https://otakudesu.best/wp-content/uploads/2019/01/Watashi-ni-Tenshi-ga-Maiorita-Sub-Indo.jpg",
+        "studios": "Doga Kobo",
+        "score": "7.52",
+        "episodes": 12,
+        "season": "Winter 2019",
+        "animeId": "watashi-tenshi-maiorita-subtitle-indonesia",
+        "href": "/anime/anime/watashi-tenshi-maiorita-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/watashi-tenshi-maiorita-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Miyako Hoshino merupakan seorang mahasiswa otaku. Ia memiliki adik bernama Hinata Hoshino yang sekarang adalah siswi kelas 5 SD.",
+            "Cerita bermulai ketika Hinata membawa teman sekelasnya yaitu Hana Shirosaki mengunjungi rumahnya. Secara sengaja, Miyako & Hana akhirnya bertemu. Pada pandangan pertama, Miyako jatuh cinta kepada Hana. Dan entah bagaimana akhirnya mereka dapat bergaul.",
+            "Namun perasaan canggung dan malu yang dialami oleh Miyako membuat Hana waspada terhadapnya. Walaupun begitu, Hana tetap mencoba untuk membuka perasaannya terhadap Miyako yang mencoba akrab dengan dirinya."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Yagate Kimi ni Naru",
+        "poster": "https://otakudesu.best/wp-content/uploads/2018/09/Yagate-Kimi-ni-Naru-Sub-Indo.jpg",
+        "studios": "TROYCA",
+        "score": "8.00",
+        "episodes": 13,
+        "season": "Fall 2018",
+        "animeId": "yagate-kimi-naru-subtitle-indonesia",
+        "href": "/anime/anime/yagate-kimi-naru-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/yagate-kimi-naru-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Sejak kecil Koito Yuu sangat menyukai manga yang bergenre Shoujo dan berharap suatu saat ada seseorang yang menyatakan perasaan terhadapnya hingga hatinya bergetar karena hal tersebut. Namun tiba waktunya, saat seorang siswa menyatakan cinta terhadapnya, Yuu tidak merasakan apapun saat itu.",
+            "Waktu kian berlalu dan ia kini sudah memasuki SMA, ia melihat sang ketua Osis Touko Nanami, menolak pernyataan cinta dari seorang siswa lainnya.",
+            "Setelah melihat kejadian itu Yuu sangat kagum dengan Nanami dan akhirnya memohon agar Nanami mengajarinya. Tapi Yuu terkejut, apakah orang kedua yang menyatakan perasaan terhadapnya adalah Nanami sendiri?."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          }
+        ]
+      },
+      {
+        "title": "Uchi no Maid ga Uzasugiru!",
+        "poster": "https://otakudesu.best/wp-content/uploads/2018/10/Uchi-no-Maid-ga-Uzasugiru-Sub-Indo.jpg",
+        "studios": "Doga Kobo",
+        "score": "7.55",
+        "episodes": 12,
+        "season": "Fall 2018",
+        "animeId": "uchi-maid-uzasugiru-subtitle-indonesia",
+        "href": "/anime/anime/uchi-maid-uzasugiru-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/uchi-maid-uzasugiru-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Uchi no Maid ga Uzasugiru! (UzaMaid) bercerita tentang seorang anak kecil bernama Misa Takanashi. Ia telah kehilangan ibundanya sejak usia mudah dan kini tinggal bersama ayahnya yang merupakan orang jepang.",
+            "Karena sibuk, ayahnya memperkerjakan seorang maid yang merupakan mantan tentara untuk menjalankan tugas rumah tangga sekaligus mengurus Misa.",
+            "Walaupun merupakan mantan tentara, ternyata Tsubame merupakan seorang pecinta anak-anak dan selalu saja mencoba mendekati Misa walaupun setiap kali ingin mendekati Misa selalu saja aksinya tersebut gagal. Dari sinilah cerita komedi mereka dimulai."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          }
+        ]
+      },
+      {
+        "title": "Tonari no Kyuuketsuki-san",
+        "poster": "https://otakudesu.best/wp-content/uploads/2018/10/Tonari-no-Kyuuketsuki-san-Sub-Indo.jpg",
+        "studios": "Studio Gokumi, AXsiZ",
+        "score": "7.21",
+        "episodes": 12,
+        "season": "Fall 2018",
+        "animeId": "tonari-kyuuketsuki-subtitle-indonesia",
+        "href": "/anime/anime/tonari-kyuuketsuki-subtitle-indonesia",
+        "otakudesuUrl": "https://otakudesu.best/anime/tonari-kyuuketsuki-subtitle-indonesia/",
+        "synopsis": {
+          "paragraphs": [
+            "Bercerita tentang seorang gadis SMU bernama Akari Amano, suatu hari ia mengalami insiden dan diselamtkan oleh seorang gadis bernama Sophie Twilight. Ternyata Sophie merupakan seorang Vampire.",
+            "Hal itu membuat Akari tertarik terhadap Sophie dan selalu mengunjungi rumah Sophie walaupun tak diundang. Walaupun Sophie merupakan seorang Vampire, ia sama sekali tak menyerang manusia dan menjalani kehidupan modern seperti kebanyakan orang lainnya.",
+            "Dari sinilah kisah mereka dimulai."
+          ]
+        },
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Shoujo Ai",
+            "genreId": "shoujo-ai",
+            "href": "/anime/genre/shoujo-ai",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo-ai/"
+          },
+          {
+            "title": "Slice of Life",
+            "genreId": "slice-of-life",
+            "href": "/anime/genre/slice-of-life",
+            "otakudesuUrl": "https://otakudesu.best/genres/slice-of-life/"
+          },
+          {
+            "title": "Supernatural",
+            "genreId": "supernatural",
+            "href": "/anime/genre/supernatural",
+            "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+          },
+          {
+            "title": "Vampire",
+            "genreId": "vampire",
+            "href": "/anime/genre/vampire",
+            "otakudesuUrl": "https://otakudesu.best/genres/vampire/"
+          }
+        ]
+      }
+    ]
+  },
+  "pagination": {
+    "currentPage": 1,
+    "hasPrevPage": false,
+    "prevPage": null,
+    "hasNextPage": true,
+    "nextPage": 2,
+    "totalPages": 2
+  }
+}
