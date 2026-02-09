@@ -18,7 +18,8 @@ password=
 database=
 DHEX;
 
-        if (!file_exists($path)) {
+        // Check if writable, otherwise don't try to write default
+        if (!file_exists($path) && is_writable(dirname($path))) {
             file_put_contents($path, $default);
         }
 
@@ -75,7 +76,8 @@ if (!function_exists('loadDhex')) {
 
 function rateLimit(int $limit = 50, int $interval = 60): bool
 {
-    $file = __DIR__ . '/../data/rate_limit.json';
+    // Use /tmp for Vercel/serverless environments
+    $file = sys_get_temp_dir() . '/rate_limit.json';
     $now = time();
 
     if (!file_exists($file)) {
@@ -108,7 +110,8 @@ function rateLimit(int $limit = 50, int $interval = 60): bool
 
 function get($url)
 {
-    $cacheDir = __DIR__ . '/cache/';
+    // Use /tmp for cache
+    $cacheDir = sys_get_temp_dir() . '/dhex_cache/';
     if (!is_dir($cacheDir)) {
         mkdir($cacheDir, 0777, true);
     }
@@ -180,7 +183,8 @@ function get($url)
 
 function get_raw($url)
 {
-    $cacheDir = __DIR__ . '/cache/';
+    // Use /tmp for cache
+    $cacheDir = sys_get_temp_dir() . '/dhex_cache/';
     if (!is_dir($cacheDir)) {
         mkdir($cacheDir, 0777, true);
     }
