@@ -21,8 +21,7 @@ $id = $_GET['id'] ?? '';
 $page = $_GET['page'] ?? 1;
 
 $userId = getRecentUserId();
-// Use /tmp for recent.json to avoid read-only errors on Vercel
-$file = sys_get_temp_dir() . '/recent.json';
+$file = __DIR__ . '/data/recent.json';
 // $json loading moved to specific cases for performance
 
 
