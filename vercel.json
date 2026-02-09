@@ -1,14 +1,18 @@
 {
     "framework": "vite",
     "functions": {
-        "api.php": {
+        "api/index.php": {
             "runtime": "vercel-php@0.7.2"
         }
     },
     "rewrites": [
         {
+            "source": "/api.php",
+            "destination": "/api/index.php"
+        },
+        {
             "source": "/dhexstream/api.php",
-            "destination": "/api.php"
+            "destination": "/api/index.php"
         },
         {
             "source": "/(.*)",

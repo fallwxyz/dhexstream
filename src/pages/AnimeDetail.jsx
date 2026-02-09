@@ -127,9 +127,9 @@ const AnimeDetail = () => {
         // Determine base URL based on environment
         let baseUrl = '';
         if (window.location.hostname === 'localhost') {
-            baseUrl = '/dhexstream/api.php';
+            baseUrl = '/dhexstream/api/index.php';
         } else {
-            baseUrl = '/api.php';
+            baseUrl = '/api/index.php';
         }
 
         try {
@@ -279,8 +279,8 @@ const AnimeDetail = () => {
                                                 onClick={() => handlePageChange(currentPage - 1)}
                                                 disabled={currentPage === 1}
                                                 className={`px-4 py-2 rounded-lg font-semibold transition-all flex items-center gap-2 ${currentPage === 1
-                                                        ? 'bg-white/5 text-gray-600 cursor-not-allowed'
-                                                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/10 hover:border-dhex-accent/50'
+                                                    ? 'bg-white/5 text-gray-600 cursor-not-allowed'
+                                                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/10 hover:border-dhex-accent/50'
                                                     }`}
                                             >
                                                 <ChevronLeft size={16} />
@@ -302,8 +302,8 @@ const AnimeDetail = () => {
                                                         key={page}
                                                         onClick={() => handlePageChange(page)}
                                                         className={`min-w-[40px] h-[40px] rounded-lg font-bold transition-all ${currentPage === page
-                                                                ? 'bg-gradient-to-r from-dhex-accent to-dhex-accent-hover text-white shadow-lg shadow-dhex-accent/30 scale-110'
-                                                                : 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white border border-white/10 hover:border-dhex-accent/50'
+                                                            ? 'bg-gradient-to-r from-dhex-accent to-dhex-accent-hover text-white shadow-lg shadow-dhex-accent/30 scale-110'
+                                                            : 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white border border-white/10 hover:border-dhex-accent/50'
                                                             }`}
                                                     >
                                                         {page}
@@ -316,8 +316,8 @@ const AnimeDetail = () => {
                                                 onClick={() => handlePageChange(currentPage + 1)}
                                                 disabled={currentPage === totalPages}
                                                 className={`px-4 py-2 rounded-lg font-semibold transition-all flex items-center gap-2 ${currentPage === totalPages
-                                                        ? 'bg-white/5 text-gray-600 cursor-not-allowed'
-                                                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/10 hover:border-dhex-accent/50'
+                                                    ? 'bg-white/5 text-gray-600 cursor-not-allowed'
+                                                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/10 hover:border-dhex-accent/50'
                                                     }`}
                                             >
                                                 <span className="hidden sm:inline">Selanjutnya</span>

@@ -14,14 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-require_once "core/core.php";
+require_once __DIR__ . "/../core/core.php";
 
 $endpoint = $_GET['endpoint'] ?? '';
 $id = $_GET['id'] ?? '';
 $page = $_GET['page'] ?? 1;
 
 $userId = getRecentUserId();
-$file = __DIR__ . '/data/recent.json';
+$file = __DIR__ . '/../data/recent.json';
 // $json loading moved to specific cases for performance
 
 
@@ -121,7 +121,7 @@ try {
 
             if (empty($id)) {
                 // Return list of genres from local file
-                $jsonPath = __DIR__ . '/data/genre.json';
+                $jsonPath = __DIR__ . '/../data/genre.json';
                 if (file_exists($jsonPath)) {
                     $jsonContent = file_get_contents($jsonPath);
                     $data = json_decode($jsonContent, true);
