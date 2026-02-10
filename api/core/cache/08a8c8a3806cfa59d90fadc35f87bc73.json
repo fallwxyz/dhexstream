@@ -1,0 +1,544 @@
+{
+  "status": "success",
+  "creator": "Sanka Vollerei",
+  "statusCode": 200,
+  "statusMessage": "OK",
+  "message": "",
+  "ok": true,
+  "data": {
+    "animeList": [
+      {
+        "title": "Osananajimi to wa Love Comedy ni Naranai Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Osananajimi-to-wa-Love-Comedy-ni-Naranai.jpg",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "osananajimi-love-comedy-sub-indo",
+        "href": "/anime/anime/osananajimi-love-comedy-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/osananajimi-love-comedy-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Harem",
+            "genreId": "harem",
+            "href": "/anime/genre/harem",
+            "otakudesuUrl": "https://otakudesu.best/genres/harem/"
+          },
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          }
+        ]
+      },
+      {
+        "title": "Himesama “Goumon” no Jikan desu Season 2 Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/153326.jpg",
+        "status": "Ongoing",
+        "score": "7.34",
+        "animeId": "goumon-s2-sub-indo",
+        "href": "/anime/anime/goumon-s2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/goumon-s2-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Gourmet",
+            "genreId": "gourmet",
+            "href": "/anime/genre/gourmet",
+            "otakudesuUrl": "https://otakudesu.best/genres/gourmet/"
+          },
+          {
+            "title": "Shounen",
+            "genreId": "shounen",
+            "href": "/anime/genre/shounen",
+            "otakudesuUrl": "https://otakudesu.best/genres/shounen/"
+          }
+        ]
+      },
+      {
+        "title": "Jigokuraku Season 2 Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/154456.jpg",
+        "status": "Ongoing",
+        "score": "7.58",
+        "animeId": "jigokuku-s2-sub-indo",
+        "href": "/anime/anime/jigokuku-s2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/jigokuku-s2-sub-indo/",
+        "genreList": [
+          {
+            "title": "Action",
+            "genreId": "action",
+            "href": "/anime/genre/action",
+            "otakudesuUrl": "https://otakudesu.best/genres/action/"
+          },
+          {
+            "title": "Adventure",
+            "genreId": "adventure",
+            "href": "/anime/genre/adventure",
+            "otakudesuUrl": "https://otakudesu.best/genres/adventure/"
+          },
+          {
+            "title": "Gore",
+            "genreId": "gore",
+            "href": "/anime/genre/gore",
+            "otakudesuUrl": "https://otakudesu.best/genres/gore/"
+          },
+          {
+            "title": "Historical",
+            "genreId": "historical",
+            "href": "/anime/genre/historical",
+            "otakudesuUrl": "https://otakudesu.best/genres/historical/"
+          },
+          {
+            "title": "Samurai",
+            "genreId": "samurai",
+            "href": "/anime/genre/samurai",
+            "otakudesuUrl": "https://otakudesu.best/genres/samurai/"
+          },
+          {
+            "title": "Shounen",
+            "genreId": "shounen",
+            "href": "/anime/genre/shounen",
+            "otakudesuUrl": "https://otakudesu.best/genres/shounen/"
+          },
+          {
+            "title": "Supernatural",
+            "genreId": "supernatural",
+            "href": "/anime/genre/supernatural",
+            "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+          }
+        ]
+      },
+      {
+        "title": "Toujima Tanzaburou wa Kamen Rider ni Naritai Sub Indo",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/10/Toujima-Tanzaburou-wa-Kamen-Rider-ni-Naritai-Sub-Indo.jpg",
+        "status": "Ongoing",
+        "score": "7.67",
+        "animeId": "toujima-tanzaburou-wa-kamen-rider-ni-naritai-sub-indo",
+        "href": "/anime/anime/toujima-tanzaburou-wa-kamen-rider-ni-naritai-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/toujima-tanzaburou-wa-kamen-rider-ni-naritai-sub-indo/",
+        "genreList": [
+          {
+            "title": "Action",
+            "genreId": "action",
+            "href": "/anime/genre/action",
+            "otakudesuUrl": "https://otakudesu.best/genres/action/"
+          },
+          {
+            "title": "Adult Cast",
+            "genreId": "adult-cast",
+            "href": "/anime/genre/adult-cast",
+            "otakudesuUrl": "https://otakudesu.best/genres/adult-cast/"
+          },
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Seinen",
+            "genreId": "seinen",
+            "href": "/anime/genre/seinen",
+            "otakudesuUrl": "https://otakudesu.best/genres/seinen/"
+          },
+          {
+            "title": "Super Power",
+            "genreId": "super-power",
+            "href": "/anime/genre/super-power",
+            "otakudesuUrl": "https://otakudesu.best/genres/super-power/"
+          }
+        ]
+      },
+      {
+        "title": "Jingai Kyoushitsu no Ningengirai Kyoushi Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/154934.jpg",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "jingai-kyoushitsu-ningengirai-kyoushi-sub-indo",
+        "href": "/anime/anime/jingai-kyoushitsu-ningengirai-kyoushi-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/jingai-kyoushitsu-ningengirai-kyoushi-sub-indo/",
+        "genreList": [
+          {
+            "title": "Drama",
+            "genreId": "drama",
+            "href": "/anime/genre/drama",
+            "otakudesuUrl": "https://otakudesu.best/genres/drama/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Supernatural",
+            "genreId": "supernatural",
+            "href": "/anime/genre/supernatural",
+            "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+          },
+          {
+            "title": "Workplace",
+            "genreId": "workplace",
+            "href": "/anime/genre/workplace",
+            "otakudesuUrl": "https://otakudesu.best/genres/workplace/"
+          }
+        ]
+      },
+      {
+        "title": "Jigoku Sensei Nube (2025) Part 2 Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Jigoku-Sensei-Nube-2025-Part-2.jpg",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "jigoku-sensei-2025-part-2-sub-indo",
+        "href": "/anime/anime/jigoku-sensei-2025-part-2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/jigoku-sensei-2025-part-2-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Horror",
+            "genreId": "horror",
+            "href": "/anime/genre/horror",
+            "otakudesuUrl": "https://otakudesu.best/genres/horror/"
+          },
+          {
+            "title": "Mythology",
+            "genreId": "mythology",
+            "href": "/anime/genre/mythology",
+            "otakudesuUrl": "https://otakudesu.best/genres/mythology/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shounen",
+            "genreId": "shounen",
+            "href": "/anime/genre/shounen",
+            "otakudesuUrl": "https://otakudesu.best/genres/shounen/"
+          },
+          {
+            "title": "Supernatural",
+            "genreId": "supernatural",
+            "href": "/anime/genre/supernatural",
+            "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+          }
+        ]
+      },
+      {
+        "title": "Arne no Jikenbo Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Arne-no-Jikenbo.jpg",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "arne-jikenbo-sub-indo",
+        "href": "/anime/anime/arne-jikenbo-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/arne-jikenbo-sub-indo/",
+        "genreList": [
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Mystery",
+            "genreId": "mystery",
+            "href": "/anime/genre/mystery",
+            "otakudesuUrl": "https://otakudesu.best/genres/mystery/"
+          },
+          {
+            "title": "Vampire",
+            "genreId": "vampire",
+            "href": "/anime/genre/vampire",
+            "otakudesuUrl": "https://otakudesu.best/genres/vampire/"
+          }
+        ]
+      },
+      {
+        "title": "Darwin Jihen Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/darwin-jihen-328e74dbdb.jpg",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "dwin-jihen-sub-indo",
+        "href": "/anime/anime/dwin-jihen-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/dwin-jihen-sub-indo/",
+        "genreList": [
+          {
+            "title": "Sci-Fi",
+            "genreId": "sci-fi",
+            "href": "/anime/genre/sci-fi",
+            "otakudesuUrl": "https://otakudesu.best/genres/sci-fi/"
+          },
+          {
+            "title": "Seinen",
+            "genreId": "seinen",
+            "href": "/anime/genre/seinen",
+            "otakudesuUrl": "https://otakudesu.best/genres/seinen/"
+          }
+        ]
+      },
+      {
+        "title": "Akujiki Reijou to Kyouketsu Koushaku (Episode 1 – 12) Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Akujiki-Reijou-to-Kyouketsu-Koushaku-Sub-Indo.jpg",
+        "status": "Completed",
+        "score": "7.12",
+        "animeId": "akujiki-reijou-kyouketsu-koushaku-sub-indo",
+        "href": "/anime/anime/akujiki-reijou-kyouketsu-koushaku-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/akujiki-reijou-kyouketsu-koushaku-sub-indo/",
+        "genreList": [
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Gourmet",
+            "genreId": "gourmet",
+            "href": "/anime/genre/gourmet",
+            "otakudesuUrl": "https://otakudesu.best/genres/gourmet/"
+          },
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          }
+        ]
+      },
+      {
+        "title": "Kikaijikake no Marie Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/10/151138.jpg",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "kikaijikake-marie-sub-indo",
+        "href": "/anime/anime/kikaijikake-marie-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/kikaijikake-marie-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Romance",
+            "genreId": "romance",
+            "href": "/anime/genre/romance",
+            "otakudesuUrl": "https://otakudesu.best/genres/romance/"
+          },
+          {
+            "title": "Shoujo",
+            "genreId": "shoujo",
+            "href": "/anime/genre/shoujo",
+            "otakudesuUrl": "https://otakudesu.best/genres/shoujo/"
+          }
+        ]
+      },
+      {
+        "title": "Jigoku Sensei Nube (2025) (Episode 1 – 13) Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/12/Jigoku-Sensei-Nube-Sub-Indo.jpg",
+        "status": "Completed",
+        "score": "6.65",
+        "animeId": "jigoku-sensei-2025-sub-indo",
+        "href": "/anime/anime/jigoku-sensei-2025-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/jigoku-sensei-2025-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Horror",
+            "genreId": "horror",
+            "href": "/anime/genre/horror",
+            "otakudesuUrl": "https://otakudesu.best/genres/horror/"
+          },
+          {
+            "title": "Mythology",
+            "genreId": "mythology",
+            "href": "/anime/genre/mythology",
+            "otakudesuUrl": "https://otakudesu.best/genres/mythology/"
+          },
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shounen",
+            "genreId": "shounen",
+            "href": "/anime/genre/shounen",
+            "otakudesuUrl": "https://otakudesu.best/genres/shounen/"
+          },
+          {
+            "title": "Supernatural",
+            "genreId": "supernatural",
+            "href": "/anime/genre/supernatural",
+            "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+          }
+        ]
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 (Episode 1 – 12) Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/11/Jibaku-Shounen-Hanako-kun-Season-2-Part-2-Sub-Indo.jpg",
+        "status": "Completed",
+        "score": "8.03",
+        "animeId": "jibaku-shounen-hanako-kun-2-part-2-sub-indo",
+        "href": "/anime/anime/jibaku-shounen-hanako-kun-2-part-2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/jibaku-shounen-hanako-kun-2-part-2-sub-indo/",
+        "genreList": [
+          {
+            "title": "School",
+            "genreId": "school",
+            "href": "/anime/genre/school",
+            "otakudesuUrl": "https://otakudesu.best/genres/school/"
+          },
+          {
+            "title": "Shounen",
+            "genreId": "shounen",
+            "href": "/anime/genre/shounen",
+            "otakudesuUrl": "https://otakudesu.best/genres/shounen/"
+          },
+          {
+            "title": "Supernatural",
+            "genreId": "supernatural",
+            "href": "/anime/genre/supernatural",
+            "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+          }
+        ]
+      },
+      {
+        "title": "Uchuujin MuuMuu (Episode 1 – 24) Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/10/Uchuujin-MuuMuu-Sub-Indo.jpg",
+        "status": "Completed",
+        "score": "6.87",
+        "animeId": "uchuujin-muumuu-sub-indo",
+        "href": "/anime/anime/uchuujin-muumuu-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/uchuujin-muumuu-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Sci-Fi",
+            "genreId": "sci-fi",
+            "href": "/anime/genre/sci-fi",
+            "otakudesuUrl": "https://otakudesu.best/genres/sci-fi/"
+          },
+          {
+            "title": "Seinen",
+            "genreId": "seinen",
+            "href": "/anime/genre/seinen",
+            "otakudesuUrl": "https://otakudesu.best/genres/seinen/"
+          }
+        ]
+      },
+      {
+        "title": "Jidou Hanbaiki ni Umarekawatta Ore wa Meikyuu wo Samayou Season 2 (Episode 1 – 12) Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/10/Jidou-Hanbaiki-ni-Umarekawatta-Ore-wa-Meikyuu-wo-Samayou-Season-2-Sub-Indo.jpg",
+        "status": "Completed",
+        "score": "6.51",
+        "animeId": "vending-machine-s2-sub-indo",
+        "href": "/anime/anime/vending-machine-s2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/vending-machine-s2-sub-indo/",
+        "genreList": [
+          {
+            "title": "Comedy",
+            "genreId": "comedy",
+            "href": "/anime/genre/comedy",
+            "otakudesuUrl": "https://otakudesu.best/genres/comedy/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Isekai",
+            "genreId": "isekai",
+            "href": "/anime/genre/isekai",
+            "otakudesuUrl": "https://otakudesu.best/genres/isekai/"
+          },
+          {
+            "title": "Reincarnation",
+            "genreId": "reincarnation",
+            "href": "/anime/genre/reincarnation",
+            "otakudesuUrl": "https://otakudesu.best/genres/reincarnation/"
+          }
+        ]
+      },
+      {
+        "title": "Kijin Gentoushou Subtitle Indonesia",
+        "poster": "https://otakudesu.best/wp-content/uploads/2025/03/Kijin-Gentoushou.png",
+        "status": "Ongoing",
+        "score": "",
+        "animeId": "kijin-gentosou-sub-indo",
+        "href": "/anime/anime/kijin-gentosou-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/kijin-gentosou-sub-indo/",
+        "genreList": [
+          {
+            "title": "Action",
+            "genreId": "action",
+            "href": "/anime/genre/action",
+            "otakudesuUrl": "https://otakudesu.best/genres/action/"
+          },
+          {
+            "title": "Adventure",
+            "genreId": "adventure",
+            "href": "/anime/genre/adventure",
+            "otakudesuUrl": "https://otakudesu.best/genres/adventure/"
+          },
+          {
+            "title": "Fantasy",
+            "genreId": "fantasy",
+            "href": "/anime/genre/fantasy",
+            "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+          },
+          {
+            "title": "Historical",
+            "genreId": "historical",
+            "href": "/anime/genre/historical",
+            "otakudesuUrl": "https://otakudesu.best/genres/historical/"
+          }
+        ]
+      }
+    ]
+  },
+  "pagination": null
+}

@@ -15,6 +15,7 @@ export default defineConfig(({ command }) => ({
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: true,
+    manifest: true, // Generate manifest.json for backend integration
     rollupOptions: {
       output: {
         manualChunks: {

@@ -39,6 +39,9 @@ const Home = () => {
 
     return (
         <div className="pb-20">
+            <div class="video" style="width:800px;">
+                <iframe src="https://hentaiocean.com/embed/hametsu-no-yuuwaku-1?logo=https://amateursubs.com/wp-content/uploads/2025/04/logo_ico-removebg-preview.png" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="true"></iframe>
+            </div>
             {/* Hero Spotlight Slider */}
             {spotlightAnimes.length > 0 && (
                 <HeroSlider slides={spotlightAnimes} />
