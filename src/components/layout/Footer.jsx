@@ -82,14 +82,14 @@ const SocialLinks = ({ links }) => (
 const BrandSection = ({ brand }) => (
   <div className="col-span-1">
     <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-10">
-       <div className="ml-14 sm:ml-10 md:ml-14 lg:ml-14 xl:ml-14 w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-110">
-            <img
-        src="/dhexstream/public/image/logo.png"
-        alt="DHEX Logo"
-        className="w-full h-full object-contain opacity-80 group-hover:opacity-100 mr-1"
-      />
-      {brand.name}
-      <span className="text-dhex-accent">{brand.accent}</span>
+      <div className="ml-14 sm:ml-10 md:ml-14 lg:ml-14 xl:ml-14 w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-110">
+        <img
+          src="/dhexstream/image/logo.png"
+          alt="DHEX Logo"
+          className="w-full h-full object-contain opacity-80 group-hover:opacity-100 mr-1"
+        />
+        {brand.name}
+        <span className="text-dhex-accent">{brand.accent}</span>
       </div>
     </h3>
     <p className="text-gray-400 text-sm leading-relaxed">
