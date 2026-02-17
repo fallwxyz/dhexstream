@@ -1,0 +1,202 @@
+{
+  "status": "success",
+  "creator": "Sanka Vollerei",
+  "statusCode": 200,
+  "statusMessage": "OK",
+  "message": "",
+  "ok": true,
+  "data": {
+    "title": "Jibaku Shounen Hanako-kun Season 2 Part 2",
+    "poster": "https://otakudesu.best/wp-content/uploads/2025/11/Jibaku-Shounen-Hanako-kun-Season-2-Part-2-Sub-Indo.jpg",
+    "japanese": "地縛少年花子くん2 後編",
+    "score": "8.03",
+    "producers": "Square Enix, Studio Hibari, Pony Canyon, TBS, Movic, Half H.P Studio, Crunchyroll, Contents Seed, Gloria",
+    "type": "TV",
+    "status": "Completed",
+    "episodes": 12,
+    "duration": "23 Menit",
+    "aired": "Jul 06, 2025",
+    "studios": "Lerche",
+    "batch": {
+      "title": "Jibaku Shounen Hanako-kun 2 Part 2 [BATCH] Subtitle Indonesia",
+      "batchId": "jshk-s2-p2-batch-sub-indo",
+      "href": "/anime/batch/jshk-s2-p2-batch-sub-indo",
+      "otakudesuUrl": "https://otakudesu.best/batch/jshk-s2-p2-batch-sub-indo/"
+    },
+    "synopsis": {
+      "paragraphs": [
+        "Lanjutan dari Jibaku Shounen Hanako-kun Season 2."
+      ],
+      "connections": [
+        {
+          "title": "Jibaku Shounen Hanako-kun",
+          "animeId": "jibaku-hanako-kun-s2-sub-indo",
+          "href": "/anime/anime/jibaku-hanako-kun-s2-sub-indo",
+          "otakudesuUrl": "https://otakudesu.best/anime/jibaku-hanako-kun-s2-sub-indo/"
+        },
+        {
+          "title": "Jibaku Shounen Hanako-kun Season 2",
+          "animeId": "jibaku-hanako-kun-s2-sub-indo",
+          "href": "/anime/anime/jibaku-hanako-kun-s2-sub-indo",
+          "otakudesuUrl": "https://otakudesu.best/anime/jibaku-hanako-kun-s2-sub-indo/"
+        }
+      ]
+    },
+    "genreList": [
+      {
+        "title": "School",
+        "genreId": "school",
+        "href": "/anime/genre/school",
+        "otakudesuUrl": "https://otakudesu.best/genres/school/"
+      },
+      {
+        "title": "Shounen",
+        "genreId": "shounen",
+        "href": "/anime/genre/shounen",
+        "otakudesuUrl": "https://otakudesu.best/genres/shounen/"
+      },
+      {
+        "title": "Supernatural",
+        "genreId": "supernatural",
+        "href": "/anime/genre/supernatural",
+        "otakudesuUrl": "https://otakudesu.best/genres/supernatural/"
+      }
+    ],
+    "episodeList": [
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 12 (End) Subtitle Indonesia",
+        "eps": 12,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-12-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-12-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-12-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 11 Subtitle Indonesia",
+        "eps": 11,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-11-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-11-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-11-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 10 Subtitle Indonesia",
+        "eps": 10,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-10-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-10-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-10-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 9 Subtitle Indonesia",
+        "eps": 9,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-9-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-9-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-9-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 8 Subtitle Indonesia",
+        "eps": 8,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-8-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-8-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-8-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 7 Subtitle Indonesia",
+        "eps": 7,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-7-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-7-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-7-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 6 Subtitle Indonesia",
+        "eps": 6,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-6-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-6-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-6-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 5 Subtitle Indonesia",
+        "eps": 5,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-5-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-5-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-5-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 4 Subtitle Indonesia",
+        "eps": 4,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-4-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-4-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-4-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 3 Subtitle Indonesia",
+        "eps": 3,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-3-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-3-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-3-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 2 Subtitle Indonesia",
+        "eps": 2,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-2-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-2-sub-indo/"
+      },
+      {
+        "title": "Jibaku Shounen Hanako-kun Season 2 Part 2 Episode 1 Subtitle Indonesia",
+        "eps": 1,
+        "date": "12 November,2025",
+        "episodeId": "jshk-s2-p2-episode-1-sub-indo",
+        "href": "/anime/episode/jshk-s2-p2-episode-1-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/jshk-s2-p2-episode-1-sub-indo/"
+      }
+    ],
+    "recommendedAnimeList": [
+      {
+        "title": "Towa no Yuugure",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/02/Towa-no-Yuugure-Sub-Indo.jpg",
+        "animeId": "towa-yuugure-sub-indo",
+        "href": "/anime/anime/towa-yuugure-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/towa-yuugure-sub-indo/"
+      },
+      {
+        "title": "Wandance",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Wandance-Sub-Indo.jpg",
+        "animeId": "wandnce-sub-indo",
+        "href": "/anime/anime/wandnce-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/wandnce-sub-indo/"
+      },
+      {
+        "title": "Nageki no Bourei wa Intai shitai Season 2",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Nageki-no-Bourei-wa-Intai-shitai-Season-2-Sub-Indo.jpg",
+        "animeId": "ageki-bourei-intai-shitai-s2-sub-indo",
+        "href": "/anime/anime/ageki-bourei-intai-shitai-s2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/ageki-bourei-intai-shitai-s2-sub-indo/"
+      },
+      {
+        "title": "Chichi wa Eiyuu, Haha wa Seirei, Musume no Watashi wa Tenseisha.",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Chichi-wa-Eiyuu-Haha-wa-Seirei-Musume-no-Watashi-wa-Tenseisha.-Sub-Indo.jpg",
+        "animeId": "chichi-haha-seirei-sub-indo",
+        "href": "/anime/anime/chichi-haha-seirei-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/chichi-haha-seirei-sub-indo/"
+      },
+      {
+        "title": "Mugen Gacha",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Mugen-Gacha-Sub-Indo.jpg",
+        "animeId": "mugen-gacha-sub-indo",
+        "href": "/anime/anime/mugen-gacha-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/mugen-gacha-sub-indo/"
+      }
+    ]
+  },
+  "pagination": null
+}

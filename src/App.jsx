@@ -17,8 +17,10 @@ const NotFound = () => <div className="min-h-screen flex items-center justify-ce
 
 
 function App() {
+    const basename = import.meta.env.BASE_URL === './' ? '/' : import.meta.env.BASE_URL;
+
     return (
-        <Router basename={import.meta.env.BASE_URL}>
+        <Router basename={basename}>
             <Suspense fallback={<Loading />}>
                 <Routes>
                     <Route path="/" element={<Layout />}>

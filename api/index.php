@@ -151,7 +151,7 @@ try {
             // Default values for robustness
             $animeId = !empty($animeId) ? $animeId : ($href ? explode('/', $href)[0] : ''); // Try to extract ID from href if missing
             $title = !empty($title) ? $title : 'Unknown Anime';
-            $poster = !empty($poster) ? $poster : '/dhexstream/assets/image/default-poster.jpg';
+            $poster = !empty($poster) ? $poster : './assets/image/default-poster.jpg';
 
             // Debug logging
             file_put_contents('debug_log.txt', date('[Y-m-d H:i:s] ') . "Processing log_recent: ID=$animeId, Title=$title\n", FILE_APPEND);

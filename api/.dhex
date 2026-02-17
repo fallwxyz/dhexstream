@@ -5,3 +5,8 @@ app_name=MyApp
 #jika tidak ada maka cukup slash atau "/"
 
 app_url=stream
+# Database Configuration (Optional for current features)
+# DB_HOST=localhost
+# DB_USER=root
+# DB_PASS=
+# DB_NAME=dhexstream

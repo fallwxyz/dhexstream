@@ -73,6 +73,8 @@ const AnimeDetail = () => {
     if (!animeData) return null;
 
     const anime = animeData.data;
+    if (!anime) return <div className="min-h-screen pt-20 flex justify-center text-red-500">Data anime tidak ditemukan</div>;
+    
     const episodes = anime.episodeList || [];
 
     // Reverse episodes untuk urutan EP 1, 2, 3, dst
@@ -127,7 +129,9 @@ const AnimeDetail = () => {
         // Determine base URL based on environment
         let baseUrl = '';
         // Check if we're in dev mode (URL contains /dhexstream/) or production
-        if (window.location.pathname.includes('/dhexstream/')) {
+        if (import.meta.env.VITE_API_BASE_URL) {
+             baseUrl = import.meta.env.VITE_API_BASE_URL;
+        } else if (import.meta.env.DEV) {
             baseUrl = '/dhexstream/api/index.php';
         } else {
             baseUrl = '/api/index.php';

@@ -1,0 +1,139 @@
+{
+  "status": "success",
+  "creator": "Sanka Vollerei",
+  "statusCode": 200,
+  "statusMessage": "OK",
+  "message": "",
+  "ok": true,
+  "data": {
+    "title": "Fate/strange Fake",
+    "poster": "https://otakudesu.best/wp-content/uploads/2024/12/132201-1.jpg",
+    "japanese": "Fate/strange Fake",
+    "score": "8.19",
+    "producers": "Aniplex, Notes",
+    "type": "TV",
+    "status": "Ongoing",
+    "episodes": null,
+    "duration": "23 min.",
+    "aired": "Des 31, 2024",
+    "studios": "A-1 Pictures",
+    "batch": null,
+    "synopsis": {
+      "paragraphs": [
+        "Perang Cawan Suci merupakan sebuah perang yang melibatkan para Master (Penyihir) dan juga Roh Pahlawan (Servant). Keduanya berperang untuk memperebutkan Cawan Suci yang dapat mengabulkan semua keingingan pemenang.",
+        "Setelah bertahun-tahun sejak pertempuran Cawan Suci Kelimat di Jepang, kini sebuah daerah bernama Snowfield yang berlokasi di Amerika Serikat terpilih menjadi Lokasi untuk perang Cawan Suci Keenam. Seluruh Master dan Servant kini berkumpul disana. Termasuk Sajou Ayaka yang diminta untuk berpartisipasi pada perang kali ini."
+      ],
+      "connections": []
+    },
+    "genreList": [
+      {
+        "title": "Action",
+        "genreId": "action",
+        "href": "/anime/genre/action",
+        "otakudesuUrl": "https://otakudesu.best/genres/action/"
+      },
+      {
+        "title": "Fantasy",
+        "genreId": "fantasy",
+        "href": "/anime/genre/fantasy",
+        "otakudesuUrl": "https://otakudesu.best/genres/fantasy/"
+      }
+    ],
+    "episodeList": [
+      {
+        "title": "Fate/strange Fake Episode 7 Subtitle Indonesia",
+        "eps": 7,
+        "date": "10 Februari,2026",
+        "episodeId": "fs-fake-episode-7-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-7-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-7-sub-indo/"
+      },
+      {
+        "title": "Fate/strange Fake Episode 6 Subtitle Indonesia",
+        "eps": 6,
+        "date": "8 Februari,2026",
+        "episodeId": "fs-fake-episode-6-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-6-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-6-sub-indo/"
+      },
+      {
+        "title": "Fate/strange Fake Episode 5 Subtitle Indonesia",
+        "eps": 5,
+        "date": "1 Februari,2026",
+        "episodeId": "fs-fake-episode-5-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-5-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-5-sub-indo/"
+      },
+      {
+        "title": "Fate/strange Fake Episode 4 Subtitle Indonesia",
+        "eps": 4,
+        "date": "25 Januari,2026",
+        "episodeId": "fs-fake-episode-4-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-4-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-4-sub-indo/"
+      },
+      {
+        "title": "Fate/strange Fake Episode 3 Subtitle Indonesia",
+        "eps": 3,
+        "date": "18 Januari,2026",
+        "episodeId": "fs-fake-episode-3-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-3-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-3-sub-indo/"
+      },
+      {
+        "title": "Fate/strange Fake Episode 2 Subtitle Indonesia",
+        "eps": 2,
+        "date": "11 Januari,2026",
+        "episodeId": "fs-fake-episode-2-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-2-sub-indo/"
+      },
+      {
+        "title": "Fate/strange Fake Episode 1 Subtitle Indonesia",
+        "eps": 1,
+        "date": "31 Desember,2024",
+        "episodeId": "fs-fake-episode-1-sub-indo",
+        "href": "/anime/episode/fs-fake-episode-1-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/episode/fs-fake-episode-1-sub-indo/"
+      }
+    ],
+    "recommendedAnimeList": [
+      {
+        "title": "Towa no Yuugure",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/02/Towa-no-Yuugure-Sub-Indo.jpg",
+        "animeId": "towa-yuugure-sub-indo",
+        "href": "/anime/anime/towa-yuugure-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/towa-yuugure-sub-indo/"
+      },
+      {
+        "title": "Wandance",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Wandance-Sub-Indo.jpg",
+        "animeId": "wandnce-sub-indo",
+        "href": "/anime/anime/wandnce-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/wandnce-sub-indo/"
+      },
+      {
+        "title": "Nageki no Bourei wa Intai shitai Season 2",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Nageki-no-Bourei-wa-Intai-shitai-Season-2-Sub-Indo.jpg",
+        "animeId": "ageki-bourei-intai-shitai-s2-sub-indo",
+        "href": "/anime/anime/ageki-bourei-intai-shitai-s2-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/ageki-bourei-intai-shitai-s2-sub-indo/"
+      },
+      {
+        "title": "Chichi wa Eiyuu, Haha wa Seirei, Musume no Watashi wa Tenseisha.",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Chichi-wa-Eiyuu-Haha-wa-Seirei-Musume-no-Watashi-wa-Tenseisha.-Sub-Indo.jpg",
+        "animeId": "chichi-haha-seirei-sub-indo",
+        "href": "/anime/anime/chichi-haha-seirei-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/chichi-haha-seirei-sub-indo/"
+      },
+      {
+        "title": "Mugen Gacha",
+        "poster": "https://otakudesu.best/wp-content/uploads/2026/01/Mugen-Gacha-Sub-Indo.jpg",
+        "animeId": "mugen-gacha-sub-indo",
+        "href": "/anime/anime/mugen-gacha-sub-indo",
+        "otakudesuUrl": "https://otakudesu.best/anime/mugen-gacha-sub-indo/"
+      }
+    ]
+  },
+  "pagination": null
+}

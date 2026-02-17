@@ -18,13 +18,13 @@ export const useFetch = (endpoint, params = {}, shouldFetch = true) => {
 
         // Determine base URL based on environment
         let baseUrl = '';
-        // Check if we're in dev mode (URL contains /dhexstream/) or production
-        if (window.location.pathname.includes('/dhexstream/')) {
-            // Development: API is at /dhexstream/api/index.php
+        if (import.meta.env.VITE_API_BASE_URL) {
+             baseUrl = import.meta.env.VITE_API_BASE_URL;
+        } else if (import.meta.env.DEV) {
+            // Development: Force use of the proxy path
             baseUrl = '/dhexstream/api/index.php';
         } else {
-            // Production / Vercel: API is at /api/index.php (rewritten from /api.php or direct)
-            // safer to use /api/index.php or /api if we want directory index
+            // Production: Absolute path to api/index.php
             baseUrl = '/api/index.php';
         }
 

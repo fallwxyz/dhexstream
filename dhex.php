@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "core/core.php";
+require_once "api/core/core.php";
 
 $page = $_GET['page'] ?? 'home';
 

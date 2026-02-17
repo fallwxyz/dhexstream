@@ -10,13 +10,13 @@ const FOOTER_CONTENT = {
       'Platform streaming anime modern dengan pengalaman menonton terbaik. Bebas iklan mengganggu dan selalu update.',
   },
   navigation: [
-    { label: 'Popular', href: '/dhexstream/watch/popular' },
-    { label: 'Trending', href: '/dhexstream/watch/top-rated' },
-    { label: 'Character List', href: '/dhexstream/characters' },
+    { label: 'Popular', href: '/watch/popular' },
+    { label: 'Trending', href: '/watch/top-rated' },
+    { label: 'Character List', href: '/characters' },
   ],
   legal: [
-    { label: 'Terms of Service', href: '/dhexstream/terms' },
-    { label: 'Privacy Policy', href: '/dhexstream/privacy' },
+    { label: 'Terms of Service', href: '/terms' },
+    { label: 'Privacy Policy', href: '/privacy' },
     { label: 'DMCA', href: '/dmca' },
   ],
   social: [
@@ -84,7 +84,7 @@ const BrandSection = ({ brand }) => (
     <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-10">
       <div className="ml-14 sm:ml-10 md:ml-14 lg:ml-14 xl:ml-14 w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-110">
         <img
-          src="/dhexstream/image/logo.png"
+          src="./image/logo.png"
           alt="DHEX Logo"
           className="w-full h-full object-contain opacity-80 group-hover:opacity-100 mr-1"
         />
