@@ -212,7 +212,7 @@ const AnimeDetail = () => {
                                         ));
                                     }
                                 }
-                                return "Format sinopsis tidak dikenal.";
+                                return "Format sinopsis tidak dikenal & tidak diketahui.";
                             })()}
                         </div>
 
